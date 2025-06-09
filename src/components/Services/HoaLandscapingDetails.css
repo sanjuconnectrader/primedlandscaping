@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+:root {
+  --primary-color: #3a7d44;
+  --primary-light: rgba(58, 125, 68, 0.1);
+  --text-color: #333333;
+  --text-light: #555555;
+  --border-color: #eaeaea;
+  --container-max: 1200px;
+  --gap: 32px;
+  --border-radius: 16px;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1), 0 16px 48px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Styles */
+.hoa-landscaping {
+  background-color: #ffffff;
+  padding: 96px 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hoa-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+.hoa-header {
+  text-align: center;
+  margin-bottom: 72px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+}
+
+.hoa-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hoa-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0 auto;
+  font-weight: 400;
+  opacity: 0.9;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Grid Layout */
+.hoa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--gap);
+  width: 100%;
+}
+
+/* Card Styles */
+.hoa-card {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hoa-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  transition: var(--transition);
+}
+
+.hoa-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-light);
+}
+
+.hoa-card:hover::before {
+  background: var(--primary-color);
+}
+
+.hoa-card__icon {
+  width: 64px;
+  height: 64px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: 1.75rem;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.hoa-card:hover .hoa-card__icon {
+  background-color: var(--primary-color);
+  color: white;
+  transform: scale(1.05);
+}
+
+.hoa-card__content {
+  flex: 1;
+}
+
+.hoa-card__title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.hoa-card__text {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin: 0;
+  font-size: 1.0625rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .hoa-landscaping {
+    padding: 80px 0;
+  }
+  
+  .hoa-grid {
+    gap: 28px;
+  }
+  
+  .hoa-card {
+    padding: 28px;
+  }
+  
+  .hoa-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hoa-landscaping {
+    padding: 72px 0;
+  }
+  
+  .hoa-title {
+    font-size: 2.25rem;
+    letter-spacing: -0.25px;
+  }
+  
+  .hoa-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .hoa-header {
+    margin-bottom: 64px;
+  }
+  
+  .hoa-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  
+  .hoa-card__icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hoa-card__title {
+    font-size: 1.25rem;
+  }
+  
+  .hoa-card__text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hoa-landscaping {
+    padding: 64px 0;
+  }
+  
+  .hoa-container {
+    padding: 0 20px;
+  }
+  
+  .hoa-title {
+    font-size: 2rem;
+  }
+  
+  .hoa-subtitle {
+    font-size: 1.0625rem;
+  }
+  
+  .hoa-header {
+    margin-bottom: 56px;
+    padding: 0;
+  }
+  
+  .hoa-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  
+  .hoa-card {
+    padding: 24px;
+  }
+  
+  .hoa-card__icon {
+    width: 52px;
+    height: 52px;
+    font-size: 1.375rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hoa-landscaping {
+    padding: 56px 0;
+  }
+  
+  .hoa-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .hoa-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hoa-header {
+    margin-bottom: 48px;
+  }
+  
+  .hoa-card {
+    padding: 20px;
+  }
+  
+  .hoa-card__title {
+    font-size: 1.1875rem;
+  }
+  
+  .hoa-card__text {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+}

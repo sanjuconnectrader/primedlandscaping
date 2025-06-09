@@ -1,0 +1,209 @@
+/* 1) Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* 2) Root variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --text-light: #4a4a4a;
+  --accent-color: #3a7d44;
+  --accent-light: #e8f5e9;
+  --gap: 3rem;
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --border-radius: 12px;
+  --container-max: 1200px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* 3) Base styles */
+.about {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 6rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.about__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  align-items: center;
+}
+
+/* 4) Image styles */
+.about__image {
+  position: relative;
+}
+
+.about__image-wrapper {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transform: perspective(1000px) rotateY(-5deg);
+  transition: var(--transition);
+}
+
+.about__image-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(58, 125, 68, 0.2) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  z-index: 1;
+}
+
+.about__image-wrapper:hover {
+  transform: perspective(1000px) rotateY(0deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.about__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 3/4;
+  transition: var(--transition);
+}
+
+.about__image-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+/* 5) Content styles */
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about__subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.about__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text-color);
+  position: relative;
+}
+
+.about__title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 1.25rem 0;
+}
+
+.about__text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about__text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.about__text strong {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.about__ctaa {
+  align-self: flex-start;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.about__ctaa:hover {
+  background: #2c6133;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* 6) Responsive design */
+@media (max-width: 992px) {
+  .about__container {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 1.5rem;
+  }
+  
+  .about__container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .about__image-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    transform: none;
+  }
+  
+  .about__content {
+    text-align: center;
+  }
+  
+  .about__title::after {
+    margin: 1.25rem auto;
+  }
+  
+  .about__ctaa {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 3rem 1rem;
+  }
+  
+  .about__text {
+    font-size: 1rem;
+  }
+  
+  .about__ctaa {
+    width: 100%;
+    padding: 0.875rem 1rem;
+  }
+}

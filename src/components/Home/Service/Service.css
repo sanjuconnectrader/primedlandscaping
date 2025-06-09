@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* ── Base Styles ─────────────────────────────────────────────── */
+.services {
+  font-family: 'Montserrat', sans-serif;
+  padding: 6rem 1.5rem;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.services__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Header Styles ───────────────────────────────────────────── */
+.services__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.services__subtitle {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4a8b2c;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.services__heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #222;
+  line-height: 1.2;
+}
+
+.services__divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #4a8b2c, #a3de83);
+  margin: 0 auto 1.5rem;
+}
+
+.services__intro {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* ── Category Styles ─────────────────────────────────────────── */
+.services__category {
+  margin-bottom: 5rem;
+}
+
+.services__subhead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.services__icon {
+  color: #4a8b2c;
+  font-size: 1.2rem;
+}
+
+/* ── Grid Layout ─────────────────────────────────────────────── */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* ── Card Styles ─────────────────────────────────────────────── */
+.svc-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 400px;
+}
+
+.svc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.svc-card__img-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.svc-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.svc-card:hover .svc-card__img {
+  transform: scale(1.05);
+}
+
+.svc-card__gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+}
+
+.svc-card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  color: white;
+  z-index: 1;
+}
+
+.svc-card__content {
+  max-width: 100%;
+}
+
+.svc-card__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.svc-card__description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.svc-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #4a8b2c;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.svc-card__btn:hover {
+  background-color: #3a7320;
+  transform: translateX(5px);
+}
+
+.svc-card__btn span {
+  transition: all 0.3s ease;
+}
+
+.svc-card__btn:hover span {
+  margin-right: 5px;
+}
+
+.svc-card__icon {
+  transition: transform 0.3s ease;
+}
+
+.svc-card__btn:hover .svc-card__icon {
+  transform: translateX(3px);
+}
+
+/* ── Responsive Adjustments ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .services {
+    padding: 4rem 1rem;
+  }
+  
+  .services__heading {
+    font-size: 2rem;
+  }
+  
+  .services__subhead {
+    font-size: 1.3rem;
+  }
+  
+  .svc-card {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services__heading {
+    font-size: 1.8rem;
+  }
+  
+  .services__subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .services__intro {
+    font-size: 1rem;
+  }
+  
+  .svc-card__title {
+    font-size: 1.3rem;
+  }
+  
+  .svc-card__description {
+    font-size: 0.9rem;
+  }
+}
