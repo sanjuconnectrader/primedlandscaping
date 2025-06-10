@@ -7,6 +7,7 @@ import Aboutpage from './pages/Aboutpage';
 import Guarantees from './components/About/Guarantees';
 import Guaranteepage from './pages/Guaranteepage';
 import HoaLandscapingpage from './pages/HoaLandscapingpage';
+import Lawncarepage from './pages/Lawncarepage';
 
 
 
@@ -21,18 +22,21 @@ const ScrollToTop = () => {
 const App = () => {
   return (
     <>
-      
+
       <ScrollToTop />
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/about/who-we-are' element={<Aboutpage/>} />
+        <Route path='/about/who-we-are' element={<Aboutpage />} />
         <Route path='/contact' element={<Contactpage />} />
 
-        <Route path='/about/our-guarantees' element={<Guaranteepage/>} />
-        <Route path='/services/hoa-landscaping' element={<HoaLandscapingpage/>} />
-  
-      
+        <Route path='/about/our-guarantees' element={<Guaranteepage />} />
+        <Route path='/services/hoa-landscaping' element={<HoaLandscapingpage />} />
+        <Route path='/services/residential-landscaping' element={<Lawncarepage />} />
+
+
+
+        
       </Routes>
     </>
   );
