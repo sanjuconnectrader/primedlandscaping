@@ -8,7 +8,7 @@ import {
   FaTrashAlt,
   FaTint,
 } from 'react-icons/fa';
-import './HoaLandscapingDetails.css';
+import './HoaLandscapingDetails.css'; // Ensure this path is correct
 
 const services = [
   {

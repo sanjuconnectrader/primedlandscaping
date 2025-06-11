@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-
 :root {
   --primary-color: #3a7d44;
   --primary-light: rgba(58, 125, 68, 0.1);
@@ -10,19 +9,18 @@
   --container-max: 1200px;
   --gap: 32px;
   --border-radius: 16px;
-  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1), 0 16px 48px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease-in-out; /* Smoother transitions for a high-end feel */
+  --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.04); /* Lighter, more elegant shadow */
+  --shadow-md: 0 12px 24px rgba(0, 0, 0, 0.08); /* Deeper shadow on hover */
 }
 
-/* Base Styles */
+
+
 .hoa-landscaping {
-  background-color: #ffffff;
-  padding: 96px 0;
+  background-color: #ffffff; /* Main section background remains white */
+  padding: 100px 0; /* More generous vertical padding */
   position: relative;
-  width: 100%;
-  overflow: hidden;
+  overflow: hidden; /* Prevent potential overflow from hover effects */
 }
 
 .hoa-container {
@@ -36,56 +34,54 @@
 /* Header Styles */
 .hoa-header {
   text-align: center;
-  margin-bottom: 72px;
-  max-width: 800px;
+  margin-bottom: 80px; /* Ample space below the header */
+  max-width: 900px; /* Allows for a wider title and subtitle */
   margin-left: auto;
   margin-right: auto;
-  padding: 0 16px;
+  padding: 0 16px; /* Inner padding for header content */
 }
 
 .hoa-title {
-  font-size: 2.75rem;
-  font-weight: 700;
+  font-size: 3.2rem; /* Larger, more prominent main title */
+  font-weight: 700; /* Bolder for impact */
   color: var(--text-color);
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
-  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1.5rem; /* Space below title */
+  line-height: 1.15;
+  letter-spacing: -0.03em; /* Slightly tighter letter spacing */
 }
 
 .hoa-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.35rem; /* Larger, more inviting subtitle */
   color: var(--text-light);
-  line-height: 1.6;
+  line-height: 1.8; /* Improved readability */
   margin: 0 auto;
   font-weight: 400;
-  opacity: 0.9;
-  font-family: 'Montserrat', sans-serif;
+  opacity: 0.95; /* Slightly less opaque for a softer look */
 }
 
 /* Grid Layout */
 .hoa-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: var(--gap);
+  /* Responsive grid: min width 340px, max 1fr for card width */
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: var(--gap); /* Consistent gap between cards */
   width: 100%;
 }
 
 /* Card Styles */
 .hoa-card {
-  background: #ffffff;
+  background: #ffffff; /* White background for cards */
   border-radius: var(--border-radius);
-  padding: 32px;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-  border: 1px solid var(--border-color);
+  padding: 36px; /* Increased padding within cards */
+  box-shadow: var(--shadow-sm); /* Soft, subtle initial shadow */
+  transition: var(--transition); /* Smooth transition for hover effects */
+  border: 1px solid var(--border-color); /* Light border */
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100%; /* Ensures cards in a row have equal height */
   box-sizing: border-box;
   position: relative;
-  overflow: hidden;
-  font-family: 'Montserrat', sans-serif;
+  overflow: hidden; /* For the top border animation */
 }
 
 .hoa-card::before {
@@ -94,59 +90,61 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 4px;
+  height: 4px; /* Thin top border */
   background: transparent;
-  transition: var(--transition);
+  transition: background var(--transition); /* Animate background of pseudo-element */
 }
 
 .hoa-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary-light);
+  transform: translateY(-12px); /* More pronounced lift on hover */
+  box-shadow: var(--shadow-md); /* Deeper shadow on hover */
+  border-color: var(--primary-light); /* Subtle border change on hover */
 }
 
 .hoa-card:hover::before {
-  background: var(--primary-color);
+  background: var(--primary-color); /* Primary color top border on hover */
 }
 
 .hoa-card__icon {
-  width: 64px;
-  height: 64px;
+  width: 72px; /* Larger icon size */
+  height: 72px; /* Larger icon size */
   background-color: var(--primary-light);
   color: var(--primary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.75rem;
-  margin-bottom: 1.75rem;
+  font-size: 2.2rem; /* Increased icon font size */
+  margin-bottom: 2rem; /* More space below icon */
   transition: var(--transition);
-  flex-shrink: 0;
+  flex-shrink: 0; /* Prevents icon from shrinking */
+  box-shadow: 0 4px 15px rgba(58, 125, 68, 0.15); /* Subtle shadow for icon */
 }
 
 .hoa-card:hover .hoa-card__icon {
-  background-color: var(--primary-color);
-  color: white;
-  transform: scale(1.05);
+  background-color: var(--primary-color); /* Solid primary background on hover */
+  color: white; /* White icon on hover */
+  transform: scale(1.05); /* Slight scale effect on icon */
+  box-shadow: 0 6px 20px rgba(58, 125, 68, 0.3); /* Deeper icon shadow on hover */
 }
 
 .hoa-card__content {
-  flex: 1;
+  flex: 1; /* Allows content to take available space */
 }
 
 .hoa-card__title {
-  font-size: 1.375rem;
+  font-size: 1.6rem; /* Larger service title */
   font-weight: 600;
   color: var(--text-color);
   margin-bottom: 1rem;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .hoa-card__text {
   color: var(--text-light);
-  line-height: 1.7;
+  line-height: 1.75; /* Improved line height for description */
   margin: 0;
-  font-size: 1.0625rem;
+  font-size: 1.08rem; /* Slightly larger text */
 }
 
 /* Responsive Adjustments */
@@ -154,128 +152,132 @@
   .hoa-landscaping {
     padding: 80px 0;
   }
-  
   .hoa-grid {
     gap: 28px;
   }
-  
   .hoa-card {
-    padding: 28px;
+    padding: 30px;
   }
-  
   .hoa-title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+  }
+  .hoa-card__icon {
+    width: 64px;
+    height: 64px;
+    font-size: 2rem;
+    margin-bottom: 1.75rem;
+  }
+  .hoa-card__title {
+    font-size: 1.45rem;
+  }
+  .hoa-card__text {
+    font-size: 1.02rem;
   }
 }
 
 @media (max-width: 768px) {
   .hoa-landscaping {
-    padding: 72px 0;
+    padding: 60px 0;
   }
-  
   .hoa-title {
-    font-size: 2.25rem;
-    letter-spacing: -0.25px;
+    font-size: 2.2rem;
+    line-height: 1.2;
   }
-  
   .hoa-subtitle {
-    font-size: 1.125rem;
+    font-size: 1.15rem;
   }
-  
   .hoa-header {
-    margin-bottom: 64px;
+    margin-bottom: 60px;
   }
-  
   .hoa-grid {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjust min-width for smaller screens */
     gap: 24px;
   }
-  
+  .hoa-card {
+    padding: 28px;
+  }
   .hoa-card__icon {
-    width: 56px;
-    height: 56px;
-    font-size: 1.5rem;
+    width: 58px;
+    height: 58px;
+    font-size: 1.8rem;
     margin-bottom: 1.5rem;
   }
-  
   .hoa-card__title {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
-  
   .hoa-card__text {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 640px) {
   .hoa-landscaping {
-    padding: 64px 0;
+    padding: 50px 0;
   }
-  
   .hoa-container {
     padding: 0 20px;
   }
-  
   .hoa-title {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
-  
   .hoa-subtitle {
-    font-size: 1.0625rem;
+    font-size: 1.05rem;
   }
-  
   .hoa-header {
-    margin-bottom: 56px;
+    margin-bottom: 50px;
     padding: 0;
   }
-  
   .hoa-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column layout on small mobiles */
     gap: 20px;
-    max-width: 520px;
+    max-width: 450px; /* Constrain single column width for readability */
     margin: 0 auto;
   }
-  
   .hoa-card {
     padding: 24px;
   }
-  
   .hoa-card__icon {
     width: 52px;
     height: 52px;
-    font-size: 1.375rem;
+    font-size: 1.6rem;
     margin-bottom: 1.25rem;
+  }
+  .hoa-card__title {
+    font-size: 1.2rem;
+  }
+  .hoa-card__text {
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
 }
 
 @media (max-width: 480px) {
   .hoa-landscaping {
-    padding: 56px 0;
+    padding: 40px 0;
   }
-  
   .hoa-title {
-    font-size: 1.75rem;
-    margin-bottom: 1.25rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
   }
-  
   .hoa-subtitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
-  
   .hoa-header {
-    margin-bottom: 48px;
+    margin-bottom: 40px;
   }
-  
   .hoa-card {
     padding: 20px;
   }
-  
-  .hoa-card__title {
-    font-size: 1.1875rem;
+  .hoa-card__icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
   }
-  
+  .hoa-card__title {
+    font-size: 1.1rem;
+  }
   .hoa-card__text {
-    font-size: 0.9375rem;
-    line-height: 1.65;
+    font-size: 0.85rem;
+    line-height: 1.55;
   }
 }

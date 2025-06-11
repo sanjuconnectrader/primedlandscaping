@@ -9,6 +9,7 @@ import Guaranteepage from './pages/Guaranteepage';
 import HoaLandscapingpage from './pages/HoaLandscapingpage';
 import Lawncarepage from './pages/Lawncarepage';
 import Hardscapingpage from './pages/Hardscapingpage';
+import Commericapage from './pages/Commericapage';
 
 
 
@@ -35,6 +36,7 @@ const App = () => {
         <Route path='/services/hoa-landscaping' element={<HoaLandscapingpage />} />
         <Route path='/services/residential-landscaping' element={<Lawncarepage />} />
         <Route path='/services/hardscaping' element={<Hardscapingpage />} />
+         <Route path='/services/commercial-landscaping' element={<Commericapage/>} />
 
 
 
