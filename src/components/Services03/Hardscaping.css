@@ -1,0 +1,80 @@
+/* Hardscaping.css */
+
+/* 1) Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* 2) Root variables */
+:root {
+  --overlay-color: rgba(0, 0, 0, 0.5);
+  --title-color: #ffffff;
+  --transition: all 0.3s ease;
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* 3) Base hero */
+.Hardscaping {
+  position: relative;
+  width: 100%;
+  /* height adjusts between 300px and 600px */
+  height: clamp(300px, 50vh, 600px);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: var(--font-body);
+  margin-top: 110px;
+  border-radius: 20px;
+}
+
+/* 4) Dark overlay */
+.Hardscaping__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--overlay-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+/* 5) Centered title */
+.Hardscaping__title {
+  position: relative;
+  z-index: 1;
+  color: var(--title-color);
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  line-height: 1.2;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  margin: 0;
+  transition: var(--transition);
+}
+
+/* 6) Hover subtle scale (optional) */
+.Hardscaping:hover .Hardscaping__title {
+  transform: scale(1.02);
+}
+
+/* 7) Responsive adjustments */
+@media (max-width: 768px) {
+  .Hardscaping {
+    height: clamp(200px, 40vh, 400px);
+  }
+  .Hardscaping__title {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .Hardscaping {
+    height: clamp(150px, 30vh, 300px);
+  }
+  .Hardscaping__title {
+    font-size: clamp(1.25rem, 8vw, 2rem);
+  }
+}

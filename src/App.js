@@ -8,6 +8,7 @@ import Guarantees from './components/About/Guarantees';
 import Guaranteepage from './pages/Guaranteepage';
 import HoaLandscapingpage from './pages/HoaLandscapingpage';
 import Lawncarepage from './pages/Lawncarepage';
+import Hardscapingpage from './pages/Hardscapingpage';
 
 
 
@@ -33,6 +34,7 @@ const App = () => {
         <Route path='/about/our-guarantees' element={<Guaranteepage />} />
         <Route path='/services/hoa-landscaping' element={<HoaLandscapingpage />} />
         <Route path='/services/residential-landscaping' element={<Lawncarepage />} />
+        <Route path='/services/hardscaping' element={<Hardscapingpage />} />
 
 
 
