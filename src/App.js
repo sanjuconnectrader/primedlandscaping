@@ -11,6 +11,7 @@ import Lawncarepage from './pages/Lawncarepage';
 import Hardscapingpage from './pages/Hardscapingpage';
 import Commericapage from './pages/Commericapage';
 import ThatchingandAerationpage from './pages/ThatchingandAerationpage';
+import Pressurewashingpage from './pages/Pressurewashingpage';
 
 
 
@@ -39,6 +40,7 @@ const App = () => {
         <Route path='/services/hardscaping' element={<Hardscapingpage />} />
         <Route path='/services/commercial-landscaping' element={<Commericapage />} />
         <Route path='/services/thatching-&-aeration' element={<ThatchingandAerationpage/>} />
+        <Route path='/services/pressure-washing' element={<Pressurewashingpage/>} />
 
 
 
