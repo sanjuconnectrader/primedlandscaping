@@ -155,7 +155,7 @@
     /* Slightly larger description text */
      font-family: 'Montserrat', sans-serif;
 }
-
+         
 /* Responsive adjustments */
 @media (max-width: 1024px) {
     .CommercialDetails {
