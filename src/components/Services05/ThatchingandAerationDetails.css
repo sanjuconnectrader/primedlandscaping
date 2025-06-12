@@ -1,0 +1,303 @@
+/* ThatchingandAerationDetails.css */
+
+:root {
+  --primary-color: #3a7d44;
+  --primary-light: rgba(58, 125, 68, 0.1);
+  --text-color: #333333;
+  --text-light: #555555;
+  --border-color: #eaeaea;
+  --container-max: 1200px;
+  --gap: 32px;
+  --border-radius: 16px;
+  --transition: all 0.3s ease-in-out;
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.ThatchingandAerationDetails {
+  background-color: #ffffff;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.ThatchingandAerationDetails__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.ThatchingandAerationDetails__main-header {
+  text-align: center;
+  margin-bottom: 80px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ThatchingandAerationDetails__main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ThatchingandAerationDetails__main-description {
+  font-size: 1.35rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ThatchingandAerationDetails__services {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--gap);
+}
+
+.ThatchingandAerationDetails__service {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  padding: 40px;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.ThatchingandAerationDetails__service:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--primary-color);
+}
+
+.ThatchingandAerationDetails__service-icon {
+  width: 68px;
+  height: 68px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1.75rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(58, 125, 68, 0.15);
+}
+
+.ThatchingandAerationDetails__service:hover .ThatchingandAerationDetails__service-icon {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 6px 20px rgba(58, 125, 68, 0.3);
+}
+
+.ThatchingandAerationDetails__service-content {
+  flex: 1;
+}
+
+.ThatchingandAerationDetails__service-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ThatchingandAerationDetails__service-description {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin: 0;
+  font-size: 1.05rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Final Thoughts Section Styling */
+.ThatchingandAerationDetails__final-thoughts {
+  text-align: center;
+  margin-top: 80px; /* Space above this section */
+  padding: 50px;
+  background-color: var(--primary-light); /* Light background for contrast */
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+}
+
+.ThatchingandAerationDetails__final-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color); /* Green title for emphasis */
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ThatchingandAerationDetails__final-description {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ThatchingandAerationDetails__contact-button {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none; /* In case it becomes a link */
+  display: inline-block; /* To allow padding/margin */
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.ThatchingandAerationDetails__contact-button:hover {
+  background-color: #2e6236; /* Slightly darker green on hover */
+  transform: translateY(-3px);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .ThatchingandAerationDetails {
+    padding: 80px 0;
+  }
+  .ThatchingandAerationDetails__main-header {
+    margin-bottom: 60px;
+  }
+  .ThatchingandAerationDetails__main-title {
+    font-size: 2.5rem;
+  }
+  .ThatchingandAerationDetails__main-description {
+    font-size: 1.2rem;
+  }
+  .ThatchingandAerationDetails__services {
+    gap: 28px;
+  }
+  .ThatchingandAerationDetails__service {
+    padding: 32px;
+  }
+  .ThatchingandAerationDetails__service-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .ThatchingandAerationDetails__service-title {
+    font-size: 1.45rem;
+  }
+  .ThatchingandAerationDetails__final-thoughts {
+    margin-top: 60px;
+    padding: 40px;
+  }
+  .ThatchingandAerationDetails__final-title {
+    font-size: 2rem;
+  }
+  .ThatchingandAerationDetails__final-description {
+    font-size: 1.1rem;
+  }
+  .ThatchingandAerationDetails__contact-button {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ThatchingandAerationDetails {
+    padding: 60px 0;
+  }
+  .ThatchingandAerationDetails__main-header {
+    margin-bottom: 40px;
+  }
+  .ThatchingandAerationDetails__main-title {
+    font-size: 2rem;
+  }
+  .ThatchingandAerationDetails__main-description {
+    font-size: 1.05rem;
+  }
+  .ThatchingandAerationDetails__services {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+  .ThatchingandAerationDetails__service {
+    padding: 28px;
+  }
+  .ThatchingandAerationDetails__service-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
+  }
+  .ThatchingandAerationDetails__service-title {
+    font-size: 1.3rem;
+  }
+  .ThatchingandAerationDetails__service-description {
+    font-size: 0.95rem;
+  }
+  .ThatchingandAerationDetails__final-thoughts {
+    margin-top: 40px;
+    padding: 30px;
+  }
+  .ThatchingandAerationDetails__final-title {
+    font-size: 1.8rem;
+  }
+  .ThatchingandAerationDetails__final-description {
+    font-size: 1rem;
+  }
+  .ThatchingandAerationDetails__contact-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ThatchingandAerationDetails {
+    padding: 40px 0;
+  }
+  .ThatchingandAerationDetails__main-title {
+    font-size: 1.75rem;
+  }
+  .ThatchingandAerationDetails__main-description {
+    font-size: 0.95rem;
+  }
+  .ThatchingandAerationDetails__service {
+    padding: 24px;
+  }
+  .ThatchingandAerationDetails__service-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+  }
+  .ThatchingandAerationDetails__service-title {
+    font-size: 1.15rem;
+  }
+  .ThatchingandAerationDetails__final-thoughts {
+    padding: 20px;
+  }
+  .ThatchingandAerationDetails__final-title {
+    font-size: 1.5rem;
+  }
+  .ThatchingandAerationDetails__final-description {
+    font-size: 0.9rem;
+  }
+  .ThatchingandAerationDetails__contact-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
