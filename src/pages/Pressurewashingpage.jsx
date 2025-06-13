@@ -12,7 +12,7 @@ const Pressurewashingpage = () => {
         <Pressurewashing/>
         <PressureWashingDetails/>
 
-        <Appointment/>
+       
 
 
         <Footer/>

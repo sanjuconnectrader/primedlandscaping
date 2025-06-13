@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 :root {
   --primary-color: #3a7d44;
   --primary-light: rgba(58, 125, 68, 0.1);
@@ -12,8 +14,8 @@
   --shadow-medium: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-
 .residential-lawncare {
+  font-family: 'Montserrat', sans-serif;
   background-color: #ffffff;
   padding: 80px 0;
   position: relative;
@@ -33,96 +35,89 @@
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-light);
   padding: var(--gap);
-  margin-bottom: 40px; /* Increased margin for better separation */
+  margin-bottom: 40px;
   transition: var(--transition);
-  border: 1px solid var(--border-color); /* Subtle border */
-   font-family: 'Montserrat', sans-serif;
+  border: 1px solid var(--border-color);
 }
 
 .service-section:hover {
   box-shadow: var(--shadow-medium);
-  transform: translateY(-5px); /* Slight lift on hover */
+  transform: translateY(-5px);
 }
 
 .service-header {
   display: flex;
   align-items: center;
-  margin-bottom: 28px; /* Slightly more space */
-  padding-bottom: 15px; /* Add padding below header */
-  border-bottom: 1px solid var(--border-color); /* Separator line */
-   font-family: 'Montserrat', sans-serif;
+  margin-bottom: 28px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .service-icon {
-  width: 56px; /* Slightly larger icon */
-  height: 56px; /* Slightly larger icon */
+  width: 56px;
+  height: 56px;
   background-color: var(--primary-light);
   color: var(--primary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem; /* Larger icon size */
-  margin-right: 20px; /* More space */
+  font-size: 1.8rem;
+  margin-right: 20px;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(58, 125, 68, 0.15); /* Subtle shadow for icon */
+  box-shadow: 0 2px 8px rgba(58, 125, 68, 0.15);
 }
 
 .service-title {
-  font-size: 2rem; /* Larger, more impactful title */
-  font-weight: 700; /* Bolder title */
+  font-size: 2rem;
+  font-weight: 700;
   color: var(--text-color);
   margin: 0;
   line-height: 1.2;
-   font-family: 'Montserrat', sans-serif;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .service-content {
-  margin-bottom: 28px; /* More space */
-  line-height: 1.8; /* Better readability */
+  margin-bottom: 28px;
+  line-height: 1.8;
   color: var(--text-light);
-  font-size: 1.05rem; /* Slightly larger text */
-   font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
 }
 
 .service-content p {
-  margin-bottom: 18px; /* Consistent paragraph spacing */
-   font-family: 'Montserrat', sans-serif;
+  margin-bottom: 18px;
 }
 
 .service-disclaimer {
-  background-color: var(--primary-light); /* Use primary-light for disclaimer background */
-  border-left: 5px solid var(--primary-color); /* Thicker border */
-  padding: 20px; /* More padding */
-  margin: 30px 0; /* More margin */
-  border-radius: 0 10px 10px 0; /* Slightly larger radius */
+  background-color: var(--primary-light);
+  border-left: 5px solid var(--primary-color);
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 0 10px 10px 0;
   font-size: 0.95rem;
   color: var(--text-color);
-   font-family: 'Montserrat', sans-serif;
 }
 
 .service-disclaimer h3 {
-  font-size: 1.35rem; /* Slightly larger disclaimer title */
+  font-size: 1.35rem;
   margin-top: 0;
   margin-bottom: 10px;
-  color: var(--primary-color); /* Primary color for disclaimer title */
-   font-family: 'Montserrat', sans-serif;
+  color: var(--primary-color);
 }
 
 .service-disclaimer p {
   margin: 0;
   color: var(--text-light);
-   font-family: 'Montserrat', sans-serif;
 }
 
 .service-features {
   list-style: none;
   padding: 0;
-  margin: 30px 0; /* More margin */
-  display: grid; /* Use grid for features */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
-  gap: 20px; /* Gap between features */
-   font-family: 'Montserrat', sans-serif;
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .service-features li {
@@ -131,7 +126,7 @@
   line-height: 1.7;
   color: var(--text-light);
   font-size: 1rem;
-  background-color: #fdfdfd; /* Light background for each feature item */
+  background-color: #fdfdfd;
   padding: 15px;
   border-radius: 8px;
   border: 1px solid var(--border-color);
@@ -145,29 +140,50 @@
 
 .feature-icon {
   color: var(--primary-color);
-  margin-right: 15px; /* More space */
-  font-size: 1.35rem; /* Larger icon */
+  margin-right: 15px;
+  font-size: 1.35rem;
   flex-shrink: 0;
   margin-top: 3px;
 }
 
 .service-closing {
-  margin-top: 32px; /* More space */
+  margin-top: 32px;
   font-style: italic;
   color: var(--text-light);
   line-height: 1.8;
-  font-size: 1.1rem; /* Slightly larger closing text */
-  text-align: center; /* Center align closing text */
+  font-size: 1.1rem;
+  text-align: center;
   padding: 20px;
   background-color: var(--primary-light);
   border-radius: var(--border-radius);
   border: 1px solid var(--primary-color);
 }
 
-/* Responsive adjustments */
+/* Enhanced Responsive Adjustments */
+@media (max-width: 1200px) {
+  .lawncare-container {
+    padding: 0 32px;
+  }
+}
+
 @media (max-width: 992px) {
   .service-title {
     font-size: 1.75rem;
+  }
+  .service-content,
+  .service-disclaimer p,
+  .service-features li,
+  .service-closing {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .residential-lawncare {
+    padding: 70px 0;
+  }
+  .service-section {
+    padding: 28px;
   }
 }
 
@@ -175,62 +191,122 @@
   .residential-lawncare {
     padding: 60px 0;
   }
-
   .service-section {
     padding: 24px;
     margin-bottom: 30px;
   }
-
   .service-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
-
   .service-icon {
-    width: 48px;
-    height: 48px;
-    font-size: 1.5rem;
-    margin-right: 16px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.6rem;
+    margin-right: 18px;
   }
-
   .service-content,
   .service-disclaimer p,
   .service-features li,
   .service-closing {
-    font-size: 0.95rem;
+    font-size: 0.98rem;
   }
-
   .service-disclaimer h3 {
-    font-size: 1.15rem;
-  }
-
-  .service-features {
-    grid-template-columns: 1fr; /* Stack features on smaller screens */
-    gap: 15px;
+    font-size: 1.2rem;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 640px) {
+  .residential-lawncare {
+    padding: 50px 0;
+  }
+  .lawncare-container {
+    padding: 0 20px;
+  }
+  .service-header {
+    flex-direction: row;
+    align-items: center;
+  }
+  .service-title {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+  .service-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 1.4rem;
+    margin-right: 16px;
+  }
+  .service-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .residential-lawncare {
+    padding: 40px 0;
+  }
+  .lawncare-container {
+    padding: 0 16px;
+  }
+  .service-section {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
   .service-header {
     flex-direction: column;
     align-items: flex-start;
-    text-align: left;
     margin-bottom: 20px;
-    padding-bottom: 10px;
   }
-
   .service-icon {
     margin-bottom: 15px;
     margin-right: 0;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     font-size: 1.3rem;
   }
+  .service-title {
+    font-size: 1.3rem;
+  }
+  .service-content,
+  .service-disclaimer p,
+  .service-features li,
+  .service-closing {
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+  .service-disclaimer h3 {
+    font-size: 1.1rem;
+  }
+}
 
+@media (max-width: 375px) {
+  .residential-lawncare {
+    padding: 35px 0;
+  }
   .service-title {
     font-size: 1.25rem;
   }
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  .service-content p {
+    margin-bottom: 15px;
+  }
+  .service-disclaimer {
+    padding: 16px;
+  }
+}
 
-  .lawncare-container {
-    padding: 0 15px;
+@media (max-width: 320px) {
+  .service-title {
+    font-size: 1.2rem;
+  }
+  .service-content,
+  .service-disclaimer p,
+  .service-features li,
+  .service-closing {
+    font-size: 0.88rem;
   }
 }

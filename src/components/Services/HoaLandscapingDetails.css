@@ -9,18 +9,17 @@
   --container-max: 1200px;
   --gap: 32px;
   --border-radius: 16px;
-  --transition: all 0.3s ease-in-out; /* Smoother transitions for a high-end feel */
-  --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.04); /* Lighter, more elegant shadow */
-  --shadow-md: 0 12px 24px rgba(0, 0, 0, 0.08); /* Deeper shadow on hover */
+  --transition: all 0.3s ease-in-out;
+  --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
-
-
 .hoa-landscaping {
-  background-color: #ffffff; /* Main section background remains white */
-  padding: 100px 0; /* More generous vertical padding */
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  padding: 100px 0;
   position: relative;
-  overflow: hidden; /* Prevent potential overflow from hover effects */
+  overflow: hidden;
 }
 
 .hoa-container {
@@ -31,57 +30,60 @@
   box-sizing: border-box;
 }
 
-/* Header Styles */
+/* Header Styles - Fixed for mobile responsiveness */
 .hoa-header {
   text-align: center;
-  margin-bottom: 80px; /* Ample space below the header */
-  max-width: 900px; /* Allows for a wider title and subtitle */
+  margin-bottom: 80px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 16px; /* Inner padding for header content */
+  padding: 0 16px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .hoa-title {
-  font-size: 3.2rem; /* Larger, more prominent main title */
-  font-weight: 700; /* Bolder for impact */
+  font-size: 3.2rem;
+  font-weight: 700;
   color: var(--text-color);
-  margin-bottom: 1.5rem; /* Space below title */
+  margin-bottom: 1.5rem;
   line-height: 1.15;
-  letter-spacing: -0.03em; /* Slightly tighter letter spacing */
+  letter-spacing: -0.03em;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .hoa-subtitle {
-  font-size: 1.35rem; /* Larger, more inviting subtitle */
+  font-size: 1.35rem;
   color: var(--text-light);
-  line-height: 1.8; /* Improved readability */
+  line-height: 1.8;
   margin: 0 auto;
   font-weight: 400;
-  opacity: 0.95; /* Slightly less opaque for a softer look */
+  opacity: 0.95;
 }
 
 /* Grid Layout */
 .hoa-grid {
   display: grid;
-  /* Responsive grid: min width 340px, max 1fr for card width */
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: var(--gap); /* Consistent gap between cards */
+  gap: var(--gap);
   width: 100%;
 }
 
 /* Card Styles */
 .hoa-card {
-  background: #ffffff; /* White background for cards */
+  background: #ffffff;
   border-radius: var(--border-radius);
-  padding: 36px; /* Increased padding within cards */
-  box-shadow: var(--shadow-sm); /* Soft, subtle initial shadow */
-  transition: var(--transition); /* Smooth transition for hover effects */
-  border: 1px solid var(--border-color); /* Light border */
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
-  height: 100%; /* Ensures cards in a row have equal height */
+  height: 100%;
   box-sizing: border-box;
   position: relative;
-  overflow: hidden; /* For the top border animation */
+  overflow: hidden;
 }
 
 .hoa-card::before {
@@ -90,50 +92,50 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 4px; /* Thin top border */
+  height: 4px;
   background: transparent;
-  transition: background var(--transition); /* Animate background of pseudo-element */
+  transition: background var(--transition);
 }
 
 .hoa-card:hover {
-  transform: translateY(-12px); /* More pronounced lift on hover */
-  box-shadow: var(--shadow-md); /* Deeper shadow on hover */
-  border-color: var(--primary-light); /* Subtle border change on hover */
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-light);
 }
 
 .hoa-card:hover::before {
-  background: var(--primary-color); /* Primary color top border on hover */
+  background: var(--primary-color);
 }
 
 .hoa-card__icon {
-  width: 72px; /* Larger icon size */
-  height: 72px; /* Larger icon size */
+  width: 72px;
+  height: 72px;
   background-color: var(--primary-light);
   color: var(--primary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.2rem; /* Increased icon font size */
-  margin-bottom: 2rem; /* More space below icon */
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
   transition: var(--transition);
-  flex-shrink: 0; /* Prevents icon from shrinking */
-  box-shadow: 0 4px 15px rgba(58, 125, 68, 0.15); /* Subtle shadow for icon */
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(58, 125, 68, 0.15);
 }
 
 .hoa-card:hover .hoa-card__icon {
-  background-color: var(--primary-color); /* Solid primary background on hover */
-  color: white; /* White icon on hover */
-  transform: scale(1.05); /* Slight scale effect on icon */
-  box-shadow: 0 6px 20px rgba(58, 125, 68, 0.3); /* Deeper icon shadow on hover */
+  background-color: var(--primary-color);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(58, 125, 68, 0.3);
 }
 
 .hoa-card__content {
-  flex: 1; /* Allows content to take available space */
+  flex: 1;
 }
 
 .hoa-card__title {
-  font-size: 1.6rem; /* Larger service title */
+  font-size: 1.6rem;
   font-weight: 600;
   color: var(--text-color);
   margin-bottom: 1rem;
@@ -142,12 +144,18 @@
 
 .hoa-card__text {
   color: var(--text-light);
-  line-height: 1.75; /* Improved line height for description */
+  line-height: 1.75;
   margin: 0;
-  font-size: 1.08rem; /* Slightly larger text */
+  font-size: 1.08rem;
 }
 
-/* Responsive Adjustments */
+/* Enhanced Responsive Adjustments */
+@media (max-width: 1200px) {
+  .hoa-container {
+    padding: 0 32px;
+  }
+}
+
 @media (max-width: 1024px) {
   .hoa-landscaping {
     padding: 80px 0;
@@ -175,6 +183,15 @@
   }
 }
 
+@media (max-width: 900px) {
+  .hoa-header {
+    margin-bottom: 70px;
+  }
+  .hoa-title {
+    font-size: 2.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hoa-landscaping {
     padding: 60px 0;
@@ -190,7 +207,7 @@
     margin-bottom: 60px;
   }
   .hoa-grid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjust min-width for smaller screens */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 24px;
   }
   .hoa-card {
@@ -219,18 +236,20 @@
   }
   .hoa-title {
     font-size: 1.9rem;
+    padding: 0 10px;
   }
   .hoa-subtitle {
     font-size: 1.05rem;
+    padding: 0 10px;
   }
   .hoa-header {
     margin-bottom: 50px;
     padding: 0;
   }
   .hoa-grid {
-    grid-template-columns: 1fr; /* Single column layout on small mobiles */
+    grid-template-columns: 1fr;
     gap: 20px;
-    max-width: 450px; /* Constrain single column width for readability */
+    max-width: 450px;
     margin: 0 auto;
   }
   .hoa-card {
@@ -255,12 +274,18 @@
   .hoa-landscaping {
     padding: 40px 0;
   }
+  .hoa-container {
+    padding: 0 16px;
+  }
   .hoa-title {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     margin-bottom: 1rem;
+    line-height: 1.25;
+    padding: 0 5px;
   }
   .hoa-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    padding: 0 5px;
   }
   .hoa-header {
     margin-bottom: 40px;
@@ -279,5 +304,58 @@
   .hoa-card__text {
     font-size: 0.85rem;
     line-height: 1.55;
+  }
+}
+
+@media (max-width: 400px) {
+  .hoa-title {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+  .hoa-subtitle {
+    font-size: 0.9rem;
+    padding: 0;
+  }
+  .hoa-header {
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 375px) {
+  .hoa-landscaping {
+    padding: 35px 0;
+  }
+  .hoa-title {
+    font-size: 1.4rem;
+  }
+  .hoa-subtitle {
+    font-size: 0.85rem;
+  }
+  .hoa-card {
+    padding: 18px;
+  }
+  .hoa-card__icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .hoa-card__title {
+    font-size: 1.05rem;
+  }
+  .hoa-card__text {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .hoa-title {
+    font-size: 1.3rem;
+  }
+  .hoa-subtitle {
+    font-size: 0.8rem;
+  }
+  .hoa-header {
+    margin-bottom: 35px;
   }
 }
