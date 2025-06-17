@@ -6,36 +6,33 @@ import './Service.css';
 const residential = [
   {
     title: 'Residential Maintenance',
-    img: 'https://static.wixstatic.com/media/645dca_5dc71debc7504246868f359ba792e637~mv2.jpeg/v1/fill/w_660,h_496,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_7937.jpeg',
-
+    img: `${process.env.PUBLIC_URL}/service1.avif`,
   },
   {
     title: 'Hardscaping',
-    img: 'https://static.wixstatic.com/media/645dca_49023b989f2446c6bc1d11a4eba4d71c~mv2.jpg/v1/fill/w_660,h_496,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/pavers-with-grass-scaled.jpg',
- 
+    img: `${process.env.PUBLIC_URL}/service2.avif`,
   },
   {
     title: 'Pressure Washing',
-    img: 'https://static.wixstatic.com/media/645dca_bd188f5565c842baaff67641146b5a86~mv2.jpg/v1/fill/w_660,h_496,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_3556_edited.jpg',
-
+    img: `${process.env.PUBLIC_URL}/service3.avif`,
   },
 ];
 
 const commercial = [
   {
     title: 'Commercial Maintenance',
-    img: 'https://static.wixstatic.com/media/645dca_fc5bb54598194e7dbccba0fc27041c3a~mv2.jpg/v1/fill/w_660,h_496,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Pegasus.jpg',
-    description: ''
+    img: `${process.env.PUBLIC_URL}/service4.avif`,
+    description: '',
   },
   {
     title: 'HOA Maintenance',
-    img: 'https://static.wixstatic.com/media/645dca_87b4d86b7dc54966854e82acba112ff9~mv2.jpg/v1/fill/w_660,h_496,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/maldonado-increase-attraction-for-home-buyers.jpg',
-    description: ''
+    img: `${process.env.PUBLIC_URL}/service5.avif`,
+    description: '',
   },
   {
     title: 'Hardscaping',
-    img: 'https://static.wixstatic.com/media/645dca_cf9b351345224db1b6d88c677205f5fb~mv2.jpg/v1/fill/w_660,h_496,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/y.jpg',
-    description: ''
+    img: `${process.env.PUBLIC_URL}/service6.avif`,
+    description: '',
   },
 ];
 

@@ -4,24 +4,21 @@ import './Header.css';
 
 const slides = [
   {
-    image:
-      'https://static.wixstatic.com/media/645dca_5dc71debc7504246868f359ba792e637~mv2.jpeg/v1/fill/w_1901,h_575,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/645dca_5dc71debc7504246868f359ba792e637~mv2.jpeg',
-    title: 'Commercial Landscaping Maintenance',
-    subtitle: 'Professional care for your commercial properties',
+    image: `${process.env.PUBLIC_URL}/Resedentialland.avif`,
+    title: 'Residential Landscaping Maintenance',
+    subtitle: 'Beautiful yards tailored for every home',
     cta: 'Explore Services'
   },
   {
-    image:
-      'https://static.wixstatic.com/media/645dca_fc5bb54598194e7dbccba0fc27041c3a~mv2.jpg/v1/fill/w_1452,h_439,al_c,q_85,enc_avif,quality_auto/645dca_fc5bb54598194e7dbccba0fc27041c3a~mv2.jpg',
-    title: 'Seasonal Landscape Services',
-    subtitle: 'Year‑round solutions tailored to your needs',
+    image: `${process.env.PUBLIC_URL}/commercialland.avif`,
+    title: 'Professional Pressure Washing',
+    subtitle: 'Restore the clean look of your property',
     cta: 'Discover Options'
   },
   {
-    image:
-      'https://static.wixstatic.com/media/645dca_e45988a357c94965aab2be64c998052c~mv2.jpg/v1/fill/w_1901,h_575,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/645dca_e45988a357c94965aab2be64c998052c~mv2.jpg',
+    image: `${process.env.PUBLIC_URL}/pressurewashing.avif`,
     title: 'Sustainable Land Management',
-    subtitle: 'Eco‑friendly solutions for modern businesses',
+    subtitle: 'Eco‑friendly solutions for modern landscapes',
     cta: 'Learn More'
   },
 ];
@@ -36,25 +33,25 @@ export default function Header() {
 
   useEffect(() => {
     if (isHovered) return;
-    
+
     const timer = setInterval(() => {
       handleTransition((current + 1) % slides.length);
     }, 5000);
-    
+
     return () => clearInterval(timer);
   }, [current, isHovered]);
 
   const handleTransition = useCallback((next) => {
     if (isAnimating || next === current) return;
-    
+
     setPrev(current);
     setCurrent(next);
     setIsAnimating(true);
-    
+
     const timer = setTimeout(() => {
       setIsAnimating(false);
     }, ANIMATION_DURATION);
-    
+
     return () => clearTimeout(timer);
   }, [current, isAnimating]);
 
@@ -63,7 +60,7 @@ export default function Header() {
   };
 
   return (
-    <header 
+    <header
       className="header"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

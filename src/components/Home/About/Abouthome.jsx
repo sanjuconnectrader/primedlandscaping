@@ -2,6 +2,8 @@ import React from 'react';
 import './Abouthome.css';
 
 export default function Abouthome() {
+  const imageUrl = `${process.env.PUBLIC_URL}/map.avif`;
+
   return (
     <section className="about">
       <div className="about__wrapper">
@@ -54,8 +56,8 @@ export default function Abouthome() {
         <div className="about__image-wrapper">
           <div className="about__image-container">
             <img
-              src="https://static.wixstatic.com/media/645dca_5aa9af51c42d4258a1ba94641916a971~mv2.png/v1/crop/x_127,y_0,w_1376,h_1080/fill/w_1376,h_1080,al_c,q_90,enc_avif,quality_auto/Main%20Residential%20Service%20Area%20(2).png"
-              alt="Mini‑excavator shaping a modern home front garden"
+              src={imageUrl}
+              alt="Landscaping work with green background"
               className="about__image"
               loading="lazy"
             />
