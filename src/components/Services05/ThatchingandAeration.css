@@ -1,80 +1,125 @@
-/* ThatchingandAeration.css */
-
-/* 1) Import fonts */
+/* ThatchingAndAeration.css */
+/* 1) Font imports with performance optimization */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
 
-/* 2) Root variables */
+/* 2) Enhanced CSS variables */
 :root {
-  --overlay-color: rgba(0, 0, 0, 0.5);
+  --overlay-color: rgba(0, 0, 0, 0.6);
   --title-color: #ffffff;
-  --transition: all 0.3s ease;
+  --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --font-display: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
+  --type-scale-1: clamp(2rem, 5.5vw, 3.5rem);
+  --type-scale-2: clamp(1.75rem, 5vw, 3rem);
+  --type-scale-3: clamp(1.5rem, 4.5vw, 2.5rem);
+  --border-radius: 24px;
+  --mobile-border-radius: 16px;
+  --section-margin: 110px;
 }
 
-/* 3) Base hero */
-.ThatchingandAeration {
+/* 3) Base hero with lawn care focus */
+.ThatchingAndAeration {
   position: relative;
   width: 100%;
-  /* height adjusts between 300px and 600px */
-  height: clamp(300px, 50vh, 600px);
+  min-height: 320px;
+  height: clamp(320px, 60vh, 800px);
   background-size: cover;
-  background-position: center center;
+  background-position: center 40%; /* Focus on lawn area */
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   font-family: var(--font-body);
-  margin-top: 110px;
-  border-radius: 20px;
+  margin: var(--section-margin) auto 0;
+  border-radius: var(--border-radius);
+  filter: brightness(1.1) contrast(1.1) saturate(1.1);
+  max-width: 1800px;
 }
 
-/* 4) Dark overlay */
-.ThatchingandAeration__overlay {
+/* 4) Natural-looking overlay */
+.ThatchingAndAeration__overlay {
   position: absolute;
   inset: 0;
-  background-color: var(--overlay-color);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
+  padding: 0 2.5rem;
+  border-radius: var(--border-radius);
 }
 
-/* 5) Centered title */
-.ThatchingandAeration__title {
+/* 5) Clear, readable title */
+.ThatchingAndAeration__title {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   color: var(--title-color);
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 5vw, 3rem);
-  line-height: 1.2;
+  font-size: var(--type-scale-1);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
   text-align: center;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  margin: 0;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 1200px;
+  width: 90%;
   transition: var(--transition);
 }
 
-/* 6) Hover subtle scale (optional) */
-.ThatchingandAeration:hover .ThatchingandAeration__title {
-  transform: scale(1.02);
+/* 6) Responsive adjustments */
+@media (max-width: 1024px) {
+  .ThatchingAndAeration {
+    height: clamp(300px, 55vh, 700px);
+  }
 }
 
-/* 7) Responsive adjustments */
 @media (max-width: 768px) {
-  .ThatchingandAeration {
-    height: clamp(200px, 40vh, 400px);
+  .ThatchingAndAeration {
+    height: clamp(250px, 50vh, 600px);
+    border-radius: var(--mobile-border-radius);
+    background-position: center 35%;
   }
-  .ThatchingandAeration__title {
-    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  
+  .ThatchingAndAeration__title {
+    font-size: var(--type-scale-2);
+    padding: 0.75rem;
+    width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  .ThatchingAndAeration {
+    height: clamp(220px, 45vh, 500px);
+  }
+  
+  .ThatchingAndAeration__title {
+    font-size: var(--type-scale-3);
+    line-height: 1.2;
+    padding: 0.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .ThatchingandAeration {
-    height: clamp(150px, 30vh, 300px);
+  .ThatchingAndAeration {
+    height: clamp(180px, 40vh, 400px);
+    background-position: center 30%;
   }
-  .ThatchingandAeration__title {
-    font-size: clamp(1.25rem, 8vw, 2rem);
+  
+  .ThatchingAndAeration__title {
+    width: 100%;
+    letter-spacing: 0;
+  }
+}
+
+/* Landscape orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+  .ThatchingAndAeration {
+    height: clamp(250px, 100vh, 500px);
   }
 }
