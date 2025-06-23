@@ -12,6 +12,9 @@ import Hardscapingpage from './pages/Hardscapingpage';
 import Commericapage from './pages/Commericapage';
 import ThatchingandAerationpage from './pages/ThatchingandAerationpage';
 import Pressurewashingpage from './pages/Pressurewashingpage';
+import Blogpage from './pages/Blogpage';
+
+import BlogDetails from './pages/BlogDetails';
 
 
 
@@ -41,6 +44,8 @@ const App = () => {
         <Route path='/services/commercial-landscaping' element={<Commericapage />} />
         <Route path='/services/thatching-&-aeration' element={<ThatchingandAerationpage/>} />
         <Route path='/services/pressure-washing' element={<Pressurewashingpage/>} />
+         <Route path='/blog' element={<Blogpage/>} />
+        <Route path="/blogs/:id" element={<BlogDetails/>} />
 
 
 

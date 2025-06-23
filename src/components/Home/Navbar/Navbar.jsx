@@ -137,6 +137,10 @@ const Navbar = () => {
             <motion.span whileHover={{ scale: 1.05 }}>Contact</motion.span>
           </a>
 
+            <a href="/blog" className="navbar__link">
+            <motion.span whileHover={{ scale: 1.05 }}>Blogs</motion.span>
+          </a>
+
           {/* Mobile buttons - only visible on mobile */}
           <div className="navbar__mobile-buttons">
             <motion.button 

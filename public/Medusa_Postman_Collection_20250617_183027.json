@@ -1,0 +1,133 @@
+{
+  "info": {
+    "name": "Medusa.js Sample API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "medusa-sample-collection",
+    "description": "A simple Postman collection to test Medusa.js eCommerce APIs"
+  },
+  "item": [
+    {
+      "name": "Customer Register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:9000/store/customers",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9000",
+          "path": [
+            "store",
+            "customers"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"testuser@example.com\",\n  \"password\": \"pass1234\",\n  \"first_name\": \"Test\",\n  \"last_name\": \"User\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Customer Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:9000/store/customers/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9000",
+          "path": [
+            "store",
+            "customers",
+            "login"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"testuser@example.com\",\n  \"password\": \"pass1234\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Get All Products",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:9000/store/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9000",
+          "path": [
+            "store",
+            "products"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Cart",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:9000/store/carts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9000",
+          "path": [
+            "store",
+            "carts"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Add Item to Cart",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:9000/store/carts/{{cart_id}}/line-items",
+          "host": [
+            "localhost"
+          ],
+          "port": "9000",
+          "path": [
+            "store",
+            "carts",
+            "{{cart_id}}",
+            "line-items"
+          ],
+          "protocol": "http"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"variant_id\": \"{{variant_id}}\",\n  \"quantity\": 1\n}"
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      }
+    }
+  ]
+}
