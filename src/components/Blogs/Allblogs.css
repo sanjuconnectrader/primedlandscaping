@@ -1,8 +1,6 @@
 :root {
   /* Color System */
-  --primary: #4361ee;
-  --primary-dark: #3a56d4;
-  --primary-light: #e6e9ff;
+  
   --accent: #f72585;
   --success: #4cc9f0;
   --warning: #f8961e;
@@ -652,6 +650,7 @@ body {
   
   .search-filter-container {
     margin-top: var(--space-lg);
+
   }
   
   .card-image-container {
@@ -700,5 +699,11 @@ body {
   
   .empty-state {
     padding: var(--space-xl) var(--space-sm);
+  }
+
+   .search-filter-container{
+    width: 80%;
+    margin-right: 80px;
+    
   }
 }
