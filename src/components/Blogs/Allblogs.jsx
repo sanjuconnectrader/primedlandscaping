@@ -8,28 +8,43 @@ const Allblogs = () => {
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("all");
+  const [isTyping, setIsTyping] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
+        setLoading(true);
         const res = await fetch(
           `${process.env.REACT_APP_API_BASE_URL}/api/blogs`
         );
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        if (!res.ok) throw new Error(`Failed to fetch (HTTP ${res.status})`);
         const data = await res.json();
         setBlogs(data);
       } catch (err) {
-        console.error("Failed to fetch blogs", err);
-        setError("Sorry — couldn't load posts.");
+        console.error("Blog fetch error:", err);
+        setError("We couldn't load the content. Please try again later.");
       } finally {
         setLoading(false);
       }
     };
-    fetchBlogs();
+    
+    const timer = setTimeout(fetchBlogs, 800); // Intentional delay for better UX
+    
+    return () => clearTimeout(timer);
   }, []);
 
-  const handleBlogClick = (id) => navigate(`/blogs/${id}`);
+  const handleBlogClick = (id) => {
+    navigate(`/blogs/${id}`, {
+      state: { fromBlogList: true } // For potential transition animations
+    });
+  };
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+    setIsTyping(true);
+    setTimeout(() => setIsTyping(false), 500);
+  };
 
   const filteredBlogs = blogs.filter(blog => {
     const matchesSearch = blog.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
@@ -43,9 +58,13 @@ const Allblogs = () => {
   if (loading) {
     return (
       <div className="loading-container">
-        <div className="loading-animation">
-          <div className="loading-spinner"></div>
-          <p className="loading-text">Curating premium content for you...</p>
+        <div className="loading-content">
+          <div className="loading-animation">
+            <div className="loading-spinner"></div>
+            <div className="loading-spinner-inner"></div>
+          </div>
+          <h3 className="loading-title">Curating Premium Content</h3>
+          <p className="loading-subtitle">Just a moment while we prepare your reading experience</p>
         </div>
       </div>
     );
@@ -66,8 +85,10 @@ const Allblogs = () => {
           <button 
             className="retry-button" 
             onClick={() => window.location.reload()}
+            aria-label="Retry loading content"
           >
-            Try Again
+            <span className="button-text">Try Again</span>
+            <span className="button-icon">↻</span>
           </button>
         </div>
       </div>
@@ -78,17 +99,22 @@ const Allblogs = () => {
     <div className="all-blogs-container">
       <header className="blogs-header">
         <div className="header-content">
-          <h1 className="header-title">Explore Our Insights</h1>
-          <p className="header-subtitle">Discover the latest from PrimedLand</p>
+          <h1 className="header-title">
+            <span className="title-highlight"></span>Explore Our Insights
+          </h1>
+          <p className="header-subtitle">
+            Discover thought-provoking content from our experts
+          </p>
           
           <div className="search-filter-container">
-            <div className="search-bar">
+            <div className={`search-bar ${isTyping ? 'typing' : ''}`}>
               <input
                 type="text"
                 placeholder="Search articles..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={handleSearchChange}
                 className="search-input"
+                aria-label="Search articles"
               />
               <span className="search-icon">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,26 +124,45 @@ const Allblogs = () => {
                     stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </span>
+              <div className="search-decoration"></div>
             </div>
             
             <div className="filter-group">
-              <select
-                value={categoryFilter}
-                onChange={(e) => setCategoryFilter(e.target.value)}
-                className="category-filter"
-              >
-                {categories.map(category => (
-                  <option key={category} value={category}>
-                    {category === "all" ? "All Categories" : category}
-                  </option>
-                ))}
-              </select>
+              <div className="filter-select-container">
+                <select
+                  value={categoryFilter}
+                  onChange={(e) => setCategoryFilter(e.target.value)}
+                  className="category-filter"
+                  aria-label="Filter by category"
+                >
+                  {categories.map(category => (
+                    <option key={category} value={category}>
+                      {category === "all" ? "All Categories" : category}
+                    </option>
+                  ))}
+                </select>
+                <div className="select-arrow">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </header>
 
       <main className="blogs-main">
+        <div className="results-header">
+          <h2 className="section-title">
+            {categoryFilter === "all" ? 'Latest Articles' : `${categoryFilter} Articles`}
+          </h2>
+          <span className="results-count">
+            <span className="count-number">{filteredBlogs.length}</span>
+            {filteredBlogs.length === 1 ? ' article' : ' articles'}
+          </span>
+        </div>
+
         {filteredBlogs.length === 0 ? (
           <div className="empty-state">
             <div className="empty-illustration">
@@ -133,8 +178,18 @@ const Allblogs = () => {
             </div>
             <h3 className="empty-title">No Matching Articles</h3>
             <p className="empty-message">
-              We couldn't find any articles matching your criteria. Try adjusting your search or filters.
+              We couldn't find any articles matching your criteria.
             </p>
+            <button 
+              className="reset-filters" 
+              onClick={() => {
+                setSearchQuery("");
+                setCategoryFilter("all");
+              }}
+              aria-label="Reset all filters"
+            >
+              Reset Filters
+            </button>
           </div>
         ) : (
           <div className="blog-grid">
@@ -143,6 +198,7 @@ const Allblogs = () => {
                 key={post.id}
                 className="blog-card"
                 onClick={() => handleBlogClick(post.id)}
+                aria-labelledby={`post-${post.id}-title`}
               >
                 <div className="card-image-container">
                   <img
@@ -166,7 +222,7 @@ const Allblogs = () => {
                     </time>
                     <span className="read-time">{post.readTime}</span>
                   </div>
-                  <h2 className="card-title">{post.title}</h2>
+                  <h2 id={`post-${post.id}-title`} className="card-title">{post.title}</h2>
                   <p className="card-excerpt">
                     {post.contents?.slice(0, 120)}…
                   </p>
