@@ -701,4 +701,9 @@ body {
   .empty-state {
     padding: var(--space-xl) var(--space-sm);
   }
+   .search-filter-container{
+    width: 80%;
+    margin-right: 80px;
+    
+  }
 }
