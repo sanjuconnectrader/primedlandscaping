@@ -650,7 +650,6 @@ body {
   
   .search-filter-container {
     margin-top: var(--space-lg);
-
   }
   
   .card-image-container {
@@ -701,6 +700,15 @@ body {
     padding: var(--space-xl) var(--space-sm);
   }
 
+   .search-filter-container{
+    width: 80%;
+    margin-right: 80px;
+    
+  }
+  
+  .empty-state {
+    padding: var(--space-xl) var(--space-sm);
+  }
    .search-filter-container{
     width: 80%;
     margin-right: 80px;
