@@ -1,27 +1,41 @@
-import React from 'react';
-import './Appointment.css';
+import React from "react";
+import { FiPhoneCall } from "react-icons/fi";
+import "./Appointment.css";
 
-const Appointment = () => (
-  <section className="Appointment">
-    <div className="Appointment__container">
-      <div className="Appointment__content">
-        <h2 className="Appointment__title">
-          Book a Residential Appointment
-        </h2>
-        <p className="Appointment__subtitle">
-          Professional landscaping and maintenance services for your neighborhood
-          or complex. Keep your property pristine with expert lawn care,
-          maintenance, and total personalized upkeep from Primed Landscaping
-        </p>
-        <button className="Appointment__btn">
-          Book Now
-          <svg className="Appointment__btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-          </svg>
-        </button>
+const Appointment = () => {
+  return (
+    <section className="appointment">
+      <div 
+        className="appointment__bg" 
+        style={{ 
+          backgroundImage: `url(${process.env.PUBLIC_URL}/booknow-background.avif)`
+        }} 
+      />
+      <div className="appointment__overlay" />
+      
+      <div className="appointment__content container">
+        <div className="appointment__text">
+          <span className="appointment__badge">Premium Service</span>
+          <h2 className="appointment__title">
+            Book Your <span className="highlight">Landscaping</span> Consultation
+          </h2>
+          
+          <p className="appointment__description">
+            Experience unmatched lawn care and maintenance services tailored for your property. 
+            Our expert team delivers personalized solutions to keep your outdoor spaces pristine.
+          </p>
+          
+          <div className="appointment__cta">
+            <a href="tel:+15551234567" className="appointment__button">
+              <FiPhoneCall className="appointment__button-icon" />
+              <span>Call Now</span>
+              <div className="appointment__button-highlight"></div>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Appointment;

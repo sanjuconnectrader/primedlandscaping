@@ -2,19 +2,21 @@ import React from 'react';
 import { FaArrowRight, FaLeaf, FaBuilding } from 'react-icons/fa';
 import './Service.css';
 
-/* ----- image data (swap with your own URLs) ---------------------- */
 const residential = [
   {
     title: 'Residential Maintenance',
     img: `${process.env.PUBLIC_URL}/service1.avif`,
+    description: 'Complete lawn care and maintenance for your home'
   },
   {
     title: 'Hardscaping',
     img: `${process.env.PUBLIC_URL}/service2.avif`,
+    description: 'Beautiful patios, walkways, and outdoor living spaces'
   },
   {
     title: 'Pressure Washing',
     img: `${process.env.PUBLIC_URL}/service3.avif`,
+    description: 'Restore your surfaces to their original beauty'
   },
 ];
 
@@ -22,24 +24,23 @@ const commercial = [
   {
     title: 'Commercial Maintenance',
     img: `${process.env.PUBLIC_URL}/service4.avif`,
-    description: '',
+    description: 'Professional care for business properties'
   },
   {
     title: 'HOA Maintenance',
     img: `${process.env.PUBLIC_URL}/service5.avif`,
-    description: '',
+    description: 'Community landscaping services'
   },
   {
     title: 'Hardscaping',
     img: `${process.env.PUBLIC_URL}/service6.avif`,
-    description: '',
+    description: 'Durable and attractive commercial hardscapes'
   },
 ];
 
-/* ----- reusable card UI ----------------------------------------- */
 function ServiceCard({ title, img, description }) {
   return (
-    <article className="svc-card group">
+    <article className="svc-card">
       <div className="svc-card__img-container">
         <img 
           src={img} 
@@ -47,29 +48,25 @@ function ServiceCard({ title, img, description }) {
           className="svc-card__img" 
           loading="lazy"
         />
-        <div className="svc-card__gradient" />
-      </div>
-
-      <div className="svc-card__overlay">
-        <div className="svc-card__content">
-          <h3 className="svc-card__title">{title}</h3>
-          <p className="svc-card__description">{description}</p>
-          <button className="svc-card__btn" aria-label={`View more about ${title}`}>
-            <span>Learn more</span>
-            <FaArrowRight className="svc-card__icon" />
-          </button>
+        <div className="svc-card__overlay">
+          <div className="svc-card__content">
+            <h3 className="svc-card__title">{title}</h3>
+            <p className="svc-card__description">{description}</p>
+            <button className="svc-card__btn">
+              <span>Learn more</span>
+              <FaArrowRight className="svc-card__icon" />
+            </button>
+          </div>
         </div>
       </div>
     </article>
   );
 }
 
-/* ----- main export ---------------------------------------------- */
 export default function Service() {
   return (
     <section className="services" id="services">
       <div className="services__container">
-
         <div className="services__header">
           <span className="services__subtitle">What We Offer</span>
           <h2 className="services__heading">Premium Landscape Services</h2>
@@ -79,7 +76,6 @@ export default function Service() {
           </p>
         </div>
 
-        {/* ── Residential block ─────────────────────────────────── */}
         <div className="services__category">
           <h3 className="services__subhead">
             <FaLeaf className="services__icon" />
@@ -92,7 +88,6 @@ export default function Service() {
           </div>
         </div>
 
-        {/* ── Commercial block ─────────────────────────────────── */}
         <div className="services__category">
           <h3 className="services__subhead">
             <FaBuilding className="services__icon" />
@@ -104,7 +99,6 @@ export default function Service() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );
