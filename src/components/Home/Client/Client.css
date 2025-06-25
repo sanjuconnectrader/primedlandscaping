@@ -3,7 +3,7 @@
 
 :root {
   --primary: #2e7d32;
-  --primary-light: #60ad5e;
+  --primary-light: #2e7d32;
   --primary-dark: #005005;
   --primary-extra-light: rgba(46, 125, 50, 0.1);
   --text: #333;
@@ -361,6 +361,7 @@
   
   .testi-card {
     padding: 2rem;
+    gap: 80px;
   }
   
   .testi-card__avatar {
@@ -387,6 +388,8 @@
 @media (max-width: 480px) {
   .testimonials {
     padding: 5rem 1rem;
+    gap: 100px;
+    
   }
   
   .section-title {
@@ -405,11 +408,18 @@
   
   .testimonials__grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 5rem;
+    margin-bottom: 3rem;
   }
   
   .testi-card {
     padding: 1.75rem 1.5rem;
+    margin-bottom: 1.5rem;
+
+  }
+  
+  .testi-card:last-child {
+    margin-bottom: 0;
   }
   
   .testi-card__header {
@@ -429,5 +439,7 @@
   .cta-button {
     padding: 0.85rem 1.75rem;
     font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
   }
 }
