@@ -2,7 +2,7 @@ import React from 'react';
 import './Abouthome.css';
 
 export default function Abouthome() {
-  const imageUrl = `${process.env.PUBLIC_URL}/Map.avif`;
+   const imageUrl = `${process.env.PUBLIC_URL}/map.jpg`;
 
   return (
     <section className="about">
