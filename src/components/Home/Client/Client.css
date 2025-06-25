@@ -3,11 +3,7 @@
 
 :root {
   --primary: #2e7d32;
-<<<<<<< HEAD
-  --primary-light: #2e7d32;
-=======
   --primary-light: #60ad5e;
->>>>>>> d687ed9453c252746732397e039530a485a3f99a
   --primary-dark: #005005;
   --primary-extra-light: rgba(46, 125, 50, 0.1);
   --text: #333;
@@ -21,7 +17,7 @@
   --border-radius: 16px;
 }
 
-/* Base Styles */
+
 .testimonials {
   position: relative;
   padding: 10rem 1.5rem;
