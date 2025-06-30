@@ -1,0 +1,168 @@
+/* 1) Font imports with swap for performance */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* 2) CSS variables for consistent theming */
+:root {
+  --overlay-color: rgba(0, 0, 0, 0.5);
+  --title-color: #ffffff;
+  --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --type-scale-1: clamp(2rem, 6vw, 3.5rem);
+  --type-scale-2: clamp(1.75rem, 5vw, 3rem);
+  --type-scale-3: clamp(1.5rem, 4.5vw, 2.5rem);
+  --container-padding: 0 2.5rem;
+  --border-radius: 24px;
+  --mobile-border-radius: 16px;
+  --section-margin-top: 110px; /* Consistent margin variable */
+}
+
+/* 3) Base hero section */
+.Irrigation {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  height: clamp(300px, 65vh, 800px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: var(--font-body);
+  margin: var(--section-margin-top) auto 0;
+  border-radius: var(--border-radius);
+  filter: brightness(1.1) contrast(1.1) saturate(0.9);
+  max-width: 1800px;
+}
+
+/* 4) Overlay with improved gradient */
+.Irrigation__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--container-padding);
+  border-radius: var(--border-radius);
+}
+
+/* 5) Title with enhanced typography */
+.Irrigation__title {
+  position: relative;
+  z-index: 2;
+  color: var(--title-color);
+  font-family: var(--font-display);
+  font-size: var(--type-scale-1);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.75px;
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  padding: 1.5rem;
+  max-width: 1200px;
+  width: 90%;
+  transition: var(--transition);
+}
+
+/* 6) Responsive breakpoints */
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 0 2rem;
+    --border-radius: var(--mobile-border-radius);
+  }
+  
+  .Irrigation {
+    height: clamp(250px, 50vh, 600px);
+    border-radius: var(--mobile-border-radius);
+  }
+  
+  .Irrigation__title {
+    width: 95%;
+    padding: 1rem;
+    letter-spacing: -0.25px;
+  }
+}
+
+/* Large phones (600px and below) */
+@media (max-width: 600px) {
+  :root {
+    --container-padding: 0 1.5rem;
+  }
+  
+  .Irrigation {
+    height: clamp(220px, 45vh, 500px);
+  }
+  
+  .Irrigation__title {
+    font-size: var(--type-scale-3);
+    line-height: 1.25;
+    padding: 0.75rem;
+  }
+}
+
+/* Small phones (480px and below) */
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 0 1rem;
+  }
+  
+  .Irrigation {
+    height: clamp(180px, 40vh, 400px);
+  }
+  
+  .Irrigation__title {
+    letter-spacing: 0;
+    -webkit-text-stroke: 0.25px rgba(0, 0, 0, 0.3);
+    text-stroke: 0.25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+  }
+}
+
+/* Very small phones (360px and below) */
+@media (max-width: 360px) {
+  .Irrigation {
+    height: clamp(150px, 35vh, 350px);
+  }
+  
+  .Irrigation__title {
+    padding: 0.5rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .Irrigation {
+    height: clamp(250px, 100vh, 500px);
+  }
+}
+
+/* Print styles */
+@media print {
+  .Irrigation {
+    height: 300px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    filter: none;
+    margin-top: 0;
+  }
+  
+  .Irrigation__overlay {
+    background: var(--overlay-color) !important;
+  }
+  
+  .Irrigation__title {
+    color: #000;
+    text-shadow: none;
+    -webkit-text-stroke: 0;
+    text-stroke: 0;
+  }
+}

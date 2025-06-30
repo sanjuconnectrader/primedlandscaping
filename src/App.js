@@ -15,6 +15,8 @@ import Pressurewashingpage from './pages/Pressurewashingpage';
 import Blogpage from './pages/Blogpage';
 
 import BlogDetails from './pages/BlogDetails';
+import Irrigationpage from './pages/Irrigationpage';
+import Turfpage from './pages/Turfpage';
 
 
 
@@ -44,6 +46,13 @@ const App = () => {
         <Route path='/services/commercial-landscaping' element={<Commericapage />} />
         <Route path='/services/thatching-&-aeration' element={<ThatchingandAerationpage/>} />
         <Route path='/services/pressure-washing' element={<Pressurewashingpage/>} />
+        <Route path='/services/irrigation' element={<Irrigationpage/>} />
+        <Route path='/services/turf-installation' element={<Turfpage/>} />
+    
+
+
+
+
          <Route path='/blog' element={<Blogpage/>} />
         <Route path="/blogs/:id" element={<BlogDetails/>} />
 

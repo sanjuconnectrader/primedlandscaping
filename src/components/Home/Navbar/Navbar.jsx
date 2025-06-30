@@ -1,5 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaChevronDown, FaChevronRight, FaUser, FaCalendarAlt, FaMedal,  FaHome, FaTree, FaLayerGroup, FaBuilding, FaLeaf, FaTint } from 'react-icons/fa';
+import {
+  FaBars,
+  FaTimes,
+  FaChevronDown,
+  FaChevronRight,
+  FaUser,
+  FaCalendarAlt,
+  FaMedal,
+  FaHome,
+  FaTree,
+  FaLayerGroup,
+  FaBuilding,
+  FaLeaf
+} from 'react-icons/fa';
+import { GiWateringCan, GiPlantWatering, GiArtificialHive } from 'react-icons/gi';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import './Navbar.css';
 
@@ -27,14 +42,17 @@ const Navbar = () => {
    
   ];
   
-  const serviceItems = [
-    { name: 'HOA Landscaping', icon: <FaHome /> },
-    { name: 'Residential Landscaping', icon: <FaTree /> },
-    { name: 'Hardscaping', icon: <FaLayerGroup /> },
-    { name: 'Commercial Landscaping', icon: <FaBuilding /> },
-    { name: 'Thatching & Aeration', icon: <FaLeaf /> },
-    { name: 'Pressure Washing', icon: <FaTint /> }
-  ];
+const serviceItems = [
+  { name: 'HOA Landscaping', icon: <FaHome /> },
+  { name: 'Residential Landscaping', icon: <FaTree /> },
+  { name: 'Hardscaping', icon: <FaLayerGroup /> },
+  { name: 'Commercial Landscaping', icon: <FaBuilding /> },
+  { name: 'Thatching & Aeration', icon: <FaLeaf /> },
+  { name: 'Pressure Washing', icon: <GiPlantWatering /> },     // Better visual cue for spraying
+  { name: 'Irrigation', icon: <GiWateringCan /> },             // More relevant than FaTint
+  { name: 'Turf Installation', icon: <GiArtificialHive /> }    // Represents surface/grid (you can change this to another if needed)
+];
+
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
