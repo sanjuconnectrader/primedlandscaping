@@ -27,7 +27,7 @@
 }
 
 .Guarantees__container {
-  max-width: var(--container-max);
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
 }
