@@ -1,46 +1,56 @@
 import React from "react";
 import "./Choose.css";
-import { FaHandsHelping, FaRegThumbsUp, FaLeaf, FaAward } from "react-icons/fa";
+import {
+  FaHandsHelping,
+  FaRegThumbsUp,
+  FaLeaf,
+  FaAward
+} from "react-icons/fa";
 
+/* ------------------------------------------------------------------
+ *  Key selling points for the landscaping business
+ * -----------------------------------------------------------------*/
 const FEATURE_ITEMS = [
-  {
-    id: 1,
-    icon: <FaHandsHelping className="feature__icon-svg" />,
-    title: "Reliable & Professional",
-    subtitle: "We value time and trust",
-  },
+ 
   {
     id: 2,
     icon: <FaRegThumbsUp className="feature__icon-svg" />,
-    title: "100% Satisfaction",
-    subtitle: "We stand behind our work",
+    title: "Customer-First Approach",
+    subtitle: "100 % satisfaction or we’ll make it right"
   },
-
+ 
+  {
+    id: 4,
+    icon: <FaAward className="feature__icon-svg" />,
+    title: "Quality Guaranteed",
+    subtitle: "Licensed, insured, and award-winning service"
+  }
 ];
 
 export default function Choose() {
-
+  /* If your hero image lives in /public, this is the easiest way to reference it */
   const imageUrl = `${process.env.PUBLIC_URL}/choose.avif`;
-
 
   return (
     <section className="choose" id="choose-us">
       <div className="choose__inner container">
-        {/* Left Content */}
+        {/* -------- Left side: text & features -------- */}
         <div className="choose__content">
           <small className="choose__eyebrow">Why Choose Us</small>
 
-          <h2 className="choose__title">
+            <h2 className="choose__title">
             The trusted partner for your{" "}
             <span className="highlight">
-              greener and <br className="line-break" /> healthier lawn
+             stunning and <br className="line-break" /> outdoor spaces
             </span>
           </h2>
 
+
           <p className="choose__text">
-            From routine maintenance to specialized treatment, our team is
-            dedicated to delivering exceptional results with reliability and
-            care. We use only premium products and cutting-edge techniques.
+            From concept to completion—whether it’s a serene backyard retreat
+            or a commercial grounds overhaul—our dedicated craftsmen blend
+            artistry with horticultural science to deliver landscapes that are
+            both beautiful and built to last.
           </p>
 
           <div className="choose__features">
@@ -54,16 +64,16 @@ export default function Choose() {
           </div>
 
           <button className="choose__btn">
-            Get started <span className="btn-arrow">→</span>
+            Get a free quote <span className="btn-arrow">→</span>
           </button>
         </div>
 
-        {/* Right Image */}
+        {/* -------- Right side: hero image -------- */}
         <figure className="choose__image-wrapper">
           <div className="choose__image-overlay"></div>
           <img
             src={imageUrl}
-            alt="Healthy green lawn"
+            alt="Beautifully landscaped garden with vibrant plants and stone pathway"
             className="choose__image"
             loading="lazy"
           />
