@@ -46,6 +46,8 @@
   margin-bottom: 1.5rem;
   line-height: 1.15;
   letter-spacing: -0.03em;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .turfdetails__subtitle {
@@ -229,6 +231,7 @@
   }
   .turfdetails__title {
     font-size: 1.9rem;
+    padding: 0 10px;
   }
   .turfdetails__subtitle {
     font-size: 1.05rem;
@@ -294,7 +297,8 @@
     padding: 35px 0;
   }
   .turfdetails__title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    padding: 0;
   }
   .turfdetails__subtitle {
     font-size: 0.85rem;

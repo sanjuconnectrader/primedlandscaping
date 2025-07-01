@@ -44,7 +44,7 @@ export default function IrrigationDetails() {
       <div className="irrigation-details__container">
         <header className="irrigation-details__header">
           <h1 className="irrigation-details__title">
-            Professional&nbsp;Irrigation&nbsp;System&nbsp;Services
+            Professional Irrigation System Services
           </h1>
           <p className="irrigation-details__subtitle">
             Certified specialists who design, install&nbsp;and maintain

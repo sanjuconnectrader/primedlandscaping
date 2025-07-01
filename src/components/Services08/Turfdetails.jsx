@@ -22,7 +22,6 @@ const services = [
     text: `Precise site measurements and cutting plans to minimize seams and waste. 
            Our team ensures perfect fit around landscaping features and structures.`,
   },
- 
   {
     icon: FaWater,
     title: 'Irrigation System Integration',
@@ -43,7 +42,7 @@ export default function Turfdetails() {
       <div className="turfdetails__container">
         <header className="turfdetails__header">
           <h1 className="turfdetails__title">
-            Professional&nbsp;ZOD&nbsp;Turf&nbsp;Installation
+            Professional ZOD Turf Installation
           </h1>
           <p className="turfdetails__subtitle">
             Certified specialists in precision ZOD turf installation—delivering 

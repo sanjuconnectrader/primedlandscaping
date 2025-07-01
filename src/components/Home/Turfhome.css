@@ -1,0 +1,233 @@
+/* ───────────── Base Styles ───────────── */
+.turfhome {
+  background-color: #ffffff;
+  padding: 4rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.turfhome__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.turfhome__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* ───────────── Intro Section ───────────── */
+.turfhome__intro {
+  flex: 1 1 45%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.turfhome__kicker {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 600;
+  color: #3a7d44;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.turfhome__headline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111111;
+  margin-bottom: 1.5rem;
+}
+
+.turfhome__description {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.6;
+  color: #555555;
+  margin-bottom: 1.5rem;
+  max-width: 45ch;
+}
+
+.turfhome__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #3a7d44;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.turfhome__cta:hover {
+  background-color: #111111;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.cta-arrow {
+  transition: transform 0.3s ease;
+}
+
+.turfhome__cta:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+/* ───────────── Features Section ───────────── */
+.turfhome__features {
+  flex: 1 1 45%;
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: #3a7d44;
+}
+
+.feature-icon-container {
+  width: 72px;
+  height: 72px;
+  background-color: rgba(58, 125, 68, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.feature-icon {
+  font-size: 1.75rem;
+  color: #3a7d44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 60%;
+  margin-left: 10px;
+}
+
+.feature-card:hover .feature-icon-container {
+  background-color: #3a7d44;
+}
+
+.feature-card:hover .feature-icon {
+  color: #ffffff;
+}
+
+.feature-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 0.5rem;
+}
+
+.feature-text {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+}
+
+/* ───────────── Hero Image ───────────── */
+.turfhome__hero {
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+  border: 1px solid #eaeaea;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.turfhome__hero:hover .hero-image {
+  transform: scale(1.03);
+}
+
+/* ───────────── Responsive Styles ───────────── */
+@media (max-width: 1024px) {
+  .turfhome__content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .turfhome__intro {
+    margin-bottom: 3rem;
+  }
+
+  .turfhome__features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .turfhome {
+    padding: 3rem 1.5rem;
+  }
+
+  .turfhome__features {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .turfhome__kicker {
+    font-size: 1rem;
+  }
+
+  .turfhome__headline {
+    font-size: 1.75rem;
+  }
+
+  .turfhome__description {
+    font-size: 1rem;
+  }
+
+  .feature-icon-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .feature-icon {
+    font-size: 1.5rem;
+  }
+}
