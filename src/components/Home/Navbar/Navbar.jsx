@@ -11,7 +11,8 @@ import {
   FaTree,
   FaLayerGroup,
   FaBuilding,
-  FaLeaf
+  FaLeaf,
+  FaTools
 } from 'react-icons/fa';
 import { GiWateringCan, GiPlantWatering, GiArtificialHive } from 'react-icons/gi';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -29,7 +30,6 @@ const Navbar = () => {
     const handleResize = () => {
       const mobile = window.innerWidth < 1025;
       setIsMobile(mobile);
-      // Close menu when switching from mobile to desktop
       if (!mobile && menuOpen) {
         setMenuOpen(false);
       }
@@ -51,8 +51,6 @@ const Navbar = () => {
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : 'auto';
-    
-    // Close dropdowns when menu closes
     if (!menuOpen) {
       setActiveDropdown(null);
       setActiveSubmenu(null);
@@ -63,7 +61,6 @@ const Navbar = () => {
     };
   }, [menuOpen]);
 
-  // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuOpen && menuRef.current && !menuRef.current.contains(event.target)) {
@@ -114,19 +111,26 @@ const Navbar = () => {
 
   const serviceItems = [
     {
-      name: 'Landscaping',
+      name: 'Maintenance',
       icon: <FaTree />,
       children: [
-        { name: 'HOA Landscaping', icon: <FaHome />, link: '/services/hoa-landscaping' },
-        { name: 'Residential Landscaping', icon: <FaTree />, link: '/services/residential-landscaping' },
-        { name: 'Commercial Landscaping', icon: <FaBuilding />, link: '/services/commercial-landscaping' }
+        { name: 'Residential', icon: <FaHome />, link: '/services/residential-maintenance' },
+        { name: 'Commercial', icon: <FaBuilding />, link: '/services/commercial-maintenance' },
+        { name: 'HOA', icon: <FaHome />, link: '/services/hoa-maintenance' }
+      ]
+    },
+    {
+      name: 'Installations',
+      icon: <FaTools />,
+      children: [
+        { name: 'Turf Installation', icon: <GiArtificialHive />, link: '/services/turf-installation' },
+        { name: 'Irrigation', icon: <GiWateringCan />, link: '/services/irrigation' },
+        { name: 'Sod Installation', icon: <FaLeaf />, link: '/services/sod-installation' }
       ]
     },
     { name: 'Hardscaping', icon: <FaLayerGroup />, link: '/services/hardscaping' },
     { name: 'Thatching & Aeration', icon: <FaLeaf />, link: '/services/thatching-aeration' },
-    { name: 'Pressure Washing', icon: <GiPlantWatering />, link: '/services/pressure-washing' },
-    { name: 'Irrigation', icon: <GiWateringCan />, link: '/services/irrigation' },
-    { name: 'Turf Installation', icon: <GiArtificialHive />, link: '/services/turf-installation' }
+    { name: 'Pressure Washing', icon: <GiPlantWatering />, link: '/services/pressure-washing' }
   ];
 
   return (
@@ -148,10 +152,14 @@ const Navbar = () => {
             <motion.span whileHover={{ scale: 1.05 }}>Home</motion.span>
           </a>
 
-          <div className="navbar__dropdown">
+          <div 
+            className="navbar__dropdown"
+            onMouseEnter={!isMobile ? () => setActiveDropdown('about') : undefined}
+            onMouseLeave={!isMobile ? () => setActiveDropdown(null) : undefined}
+          >
             <button
               className="navbar__link navbar__dropdown-toggle"
-              onClick={() => toggleDropdown('about')}
+              onClick={() => isMobile && toggleDropdown('about')}
               aria-expanded={activeDropdown === 'about'}
             >
               <span>About</span>
@@ -182,10 +190,14 @@ const Navbar = () => {
             </AnimatePresence>
           </div>
 
-          <div className="navbar__dropdown">
+          <div 
+            className="navbar__dropdown"
+            onMouseEnter={!isMobile ? () => setActiveDropdown('services') : undefined}
+            onMouseLeave={!isMobile ? () => setActiveDropdown(null) : undefined}
+          >
             <button
               className="navbar__link navbar__dropdown-toggle"
-              onClick={() => toggleDropdown('services')}
+              onClick={() => isMobile && toggleDropdown('services')}
               aria-expanded={activeDropdown === 'services'}
             >
               <span>Services</span>
@@ -202,10 +214,15 @@ const Navbar = () => {
                 >
                   {serviceItems.map((item) => (
                     item.children ? (
-                      <div className="navbar__submenu-container" key={item.name}>
+                      <div 
+                        className="navbar__submenu-container" 
+                        key={item.name}
+                        onMouseEnter={!isMobile ? () => setActiveSubmenu(item.name) : undefined}
+                        onMouseLeave={!isMobile ? () => setActiveSubmenu(null) : undefined}
+                      >
                         <button
                           className={`navbar__dropdown-item ${activeSubmenu === item.name ? 'active' : ''}`}
-                          onClick={() => toggleSubmenu(item.name)}
+                          onClick={() => isMobile && toggleSubmenu(item.name)}
                           aria-expanded={activeSubmenu === item.name}
                         >
                           <span className="dropdown-icon">{item.icon}</span>

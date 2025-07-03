@@ -1,3 +1,4 @@
+/* Navbar.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 
 :root {
@@ -154,12 +155,11 @@
   background: var(--bg-color);
   min-width: 240px;
   border-radius: var(--border-radius);
- 
+  box-shadow: var(--shadow-lg);
   z-index: 100;
   padding: 0.5rem 0;
   border: 1px solid rgba(0, 0, 0, 0.05);
   transform-origin: top center;
-
 }
 
 .navbar__dropdown-item {
@@ -295,6 +295,7 @@
   background: var(--bg-color);
   min-width: 280px;
   border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
   z-index: 150;
   padding: 0.5rem 0;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -443,49 +444,6 @@
 
   .navbar__dropdown-item.submenu-item {
     padding: 1rem 1.5rem 1rem 3.5rem;
-  }
-}
-
-/* Desktop Hover Effects */
-@media (min-width: 1025px) {
-  .navbar__dropdown-menu {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(15px);
-    transition: all 0.3s ease, transform 0.2s ease;
-  }
-
-  .navbar__dropdown:hover .navbar__dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  .navbar__submenu {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease, transform 0.2s ease;
-  }
-
-  .navbar__submenu-container:hover .navbar__submenu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  .navbar__dropdown-toggle .dropdown-icon {
-    transition: transform 0.3s ease;
-  }
-
-  .navbar__dropdown:hover .navbar__dropdown-toggle .dropdown-icon {
-    transform: rotate(180deg);
-    color: var(--primary-color);
-  }
-
-  .navbar__submenu-container:hover > .navbar__dropdown-item .submenu-icon {
-    transform: rotate(90deg);
-    color: var(--primary-color);
   }
 }
 

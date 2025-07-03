@@ -13,7 +13,7 @@ import {
   FaTint,
   FaUmbrellaBeach,
 } from 'react-icons/fa';
-import './LawncareDetails.css'; // Make sure this path is correct
+import './LawncareDetails.css'; // Updated CSS file name
 
 const residentialServices = [
   {
@@ -87,7 +87,6 @@ const residentialServices = [
       },
     ],
   },
-  // You would add more package definitions here following the same structure
   {
     icon: FaCheckCircle,
     title: 'Why Choose Primed Landscaping?',
@@ -115,19 +114,19 @@ const residentialServices = [
 
 export default function ResidentialLawncare() {
   return (
-    <section className="residential-lawncare">
-      <div className="lawncare-container">
+    <section className="comprehensive-residential-lawncare">
+      <div className="comprehensive-lawncare-container">
         {residentialServices.map((service, index) => (
-          <div key={index} className="service-section">
-            <header className="service-header">
-              <span className="service-icon">
+          <div key={index} className="comprehensive-section">
+            <header className="comprehensive-header">
+              <span className="comprehensive-icon">
                 <service.icon aria-hidden="true" />
               </span>
-              <h2 className="service-title">{service.title}</h2>
+              <h2 className="comprehensive-title">{service.title}</h2>
             </header>
 
             {service.content && (
-              <div className="service-content">
+              <div className="comprehensive-content">
                 {service.content.map((paragraph, i) => (
                   <p key={i} dangerouslySetInnerHTML={{ __html: paragraph }} />
                 ))}
@@ -135,17 +134,17 @@ export default function ResidentialLawncare() {
             )}
 
             {service.disclaimer && (
-              <div className="service-disclaimer">
+              <div className="comprehensive-disclaimer">
                 <h3>{service.disclaimer.title}</h3>
                 <p>{service.disclaimer.text}</p>
               </div>
             )}
 
             {service.features && (
-              <ul className="service-features">
+              <ul className="comprehensive-features">
                 {service.features.map((feature, i) => (
                   <li key={i}>
-                    <span className="feature-icon">
+                    <span className="comprehensive-feature-icon">
                       <feature.icon aria-hidden="true" />
                     </span>
                     <span>{feature.text}</span>
@@ -155,7 +154,7 @@ export default function ResidentialLawncare() {
             )}
 
             {service.closing && (
-              <div className="service-closing">
+              <div className="comprehensive-closing">
                 <p>{service.closing}</p>
               </div>
             )}
