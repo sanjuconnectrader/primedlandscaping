@@ -173,9 +173,9 @@
 }
 
 @media (max-width: 640px) {
-  .zoddetails { padding: 50px 0; }
+  .zoddetails { padding: 50px 0;  }
   .zoddetails__container { padding: 0 20px; }
-  .zoddetails__grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+  .zoddetails__grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; gap: 70px;}
   .zoddetails__title { font-size: 1.9rem; }
   .zoddetails__subtitle { font-size: 1.05rem; }
   .zoddetails__card-icon {
@@ -198,7 +198,7 @@
   .zoddetails { padding: 35px 0; }
   .zoddetails__title { font-size: 1.5rem; }
   .zoddetails__subtitle { font-size: 0.85rem; }
-  .zoddetails__card { padding: 18px; }
+  .zoddetails__card { padding: 18px;  }
   .zoddetails__card-icon { width: 44px; height: 44px; font-size: 1.3rem; }
   .zoddetails__card-title { font-size: 1.05rem; }
   .zoddetails__card-text { font-size: 0.82rem; }

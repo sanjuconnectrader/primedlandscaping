@@ -60,7 +60,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 1.5rem;
-  background-color: #3a7d44;
+  background: linear-gradient(90deg, #2a5f4b, #4caf7d);
   color: #ffffff;
   border: none;
   border-radius: 8px;

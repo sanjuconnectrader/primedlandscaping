@@ -280,15 +280,7 @@ const Navbar = () => {
           </a>
 
           <div className="navbar__mobile-buttons">
-            <motion.button
-              className="btn btn--outline"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={handleLinkClick}
-            >
-              <FaUser className="btn__icon--left" />
-              Client Login
-            </motion.button>
+          
             <motion.button
               className="btn btn--primary"
               whileHover={{ scale: 1.05 }}
@@ -296,7 +288,7 @@ const Navbar = () => {
               onClick={handleLinkClick}
             >
               <FaCalendarAlt className="btn__icon--left" />
-              Book Consultation
+           Call-Us Now
             </motion.button>
           </div>
         </div>
