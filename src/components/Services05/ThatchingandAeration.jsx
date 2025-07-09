@@ -14,7 +14,7 @@ const ThatchingAndAeration = () => {
     >
       <div className="ThatchingAndAeration__overlay">
         <h1 className="ThatchingAndAeration__title">
-          Thatching and Aeration Services
+          Lawn Recovery Package
         </h1>
       </div>
     </section>

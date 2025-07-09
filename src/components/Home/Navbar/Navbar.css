@@ -162,7 +162,6 @@
   padding: 0.5rem 0;
   border: 1px solid rgba(0, 0, 0, 0.05);
   transform-origin: top center;
-
 }
 
 .navbar__dropdown-item {
@@ -183,8 +182,6 @@
   position: relative;
   overflow: hidden;
 }
-
-
 
 .navbar__dropdown-item .dropdown-icon {
   color: var(--primary-color);
@@ -245,9 +242,8 @@
 }
 
 .btn--primary {
- background: linear-gradient(90deg, #2a5f4b, #4caf7d);
+  background: linear-gradient(90deg, #2a5f4b, #4caf7d);
   color: #fff;
-  
 }
 
 .btn--primary:hover {

@@ -45,7 +45,7 @@ const App = () => {
         <Route path='/services/residential-maintenance' element={<Lawncarepage />} />
         <Route path='/services/hardscaping' element={<Hardscapingpage />} />
         <Route path='/services/commercial-maintenance' element={<Commericapage />} />
-        <Route path='/services/thatching-&-aeration' element={<ThatchingandAerationpage/>} />
+        <Route path='/services/lawn-recovery-package' element={<ThatchingandAerationpage/>} />
         <Route path='/services/pressure-washing' element={<Pressurewashingpage/>} />
         <Route path='/services/irrigation' element={<Irrigationpage/>} />
         <Route path='/services/turf-installation' element={<Turfpage/>} />

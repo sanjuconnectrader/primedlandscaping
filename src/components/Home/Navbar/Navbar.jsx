@@ -119,18 +119,10 @@ const Navbar = () => {
         { name: 'HOA', icon: <FaHome />, link: '/services/hoa-maintenance' }
       ]
     },
-    {
-      name: 'Installations',
-      icon: <FaTools />,
-      children: [
-        { name: 'Turf Installation', icon: <GiArtificialHive />, link: '/services/turf-installation' },
-        { name: 'Irrigation', icon: <GiWateringCan />, link: '/services/irrigation' },
-        { name: 'Sod Installation', icon: <FaLeaf />, link: '/services/sod-installation' }
-      ]
-    },
-    { name: 'Hardscaping', icon: <FaLayerGroup />, link: '/services/hardscaping' },
-    { name: 'Thatching & Aeration', icon: <FaLeaf />, link: '/services/thatching-aeration' },
-    { name: 'Pressure Washing', icon: <GiPlantWatering />, link: '/services/pressure-washing' }
+    { name: 'Turf Installation', icon: <GiArtificialHive />, link: '/services/turf-installation' },
+    { name: 'Irrigation', icon: <GiWateringCan />, link: '/services/irrigation' },
+    { name: 'Sod Installation', icon: <FaLeaf />, link: '/services/sod-installation' },
+    { name: 'Lawn Recovery Package', icon: <FaLeaf />, link: '/services/lawn-recovery-package' }
   ];
 
   return (
@@ -280,7 +272,6 @@ const Navbar = () => {
           </a>
 
           <div className="navbar__mobile-buttons">
-          
             <motion.button
               className="btn btn--primary"
               whileHover={{ scale: 1.05 }}
@@ -288,7 +279,7 @@ const Navbar = () => {
               onClick={handleLinkClick}
             >
               <FaCalendarAlt className="btn__icon--left" />
-           Call-Us Now
+              Call-Us Now
             </motion.button>
           </div>
         </div>
