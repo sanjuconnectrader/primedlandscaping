@@ -11,7 +11,7 @@ const residential = [
   {
     title: 'Commercial',
     img: `${process.env.PUBLIC_URL}/service2.avif`,
-    description: 'Well-designed landscapes, functional walkways, and inviting outdoor spaces that enhance your business appeal'
+    description: 'Well-designed landscapes, functional walkways'
   },
   {
     title: 'HOA',
