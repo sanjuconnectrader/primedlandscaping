@@ -19,7 +19,7 @@ const Maintenance = () => {
                 alt="Residential lawn care"
                 loading="lazy"
               />
-              <div className="maintenance-home-media-caption">Residential Care</div>
+              <div className="maintenance-home-media-caption">Residential Maintenance</div>
             </div>
             <div className="maintenance-home-media-grid__item maintenance-home-img2">
               <img
@@ -35,7 +35,7 @@ const Maintenance = () => {
                 alt="HOA common-area upkeep"
                 loading="lazy"
               />
-              <div className="maintenance-home-media-caption">HOA Upkeep</div>
+              <div className="maintenance-home-media-caption">HOA Maintenance</div>
             </div>
           </div>
         </div>
