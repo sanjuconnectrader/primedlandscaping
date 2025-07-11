@@ -1,39 +1,39 @@
 import React from 'react';
 import {
   FaLeaf,        // 🌿 – turf installation
-  FaRuler,       // 📏 – precise measurements
-  FaTruck,       // 🚚 – material delivery
-  FaWater,       // 💦 – irrigation integration
-  FaCheckCircle  // ✅ – quality assurance
+  FaRuler,       // 📏 – measurements
+  FaTruck,       // 🚚 – delivery
+  FaWater,       // 💦 – irrigation
+  FaCheckCircle  // ✅ – quality check
 } from 'react-icons/fa';
 import './Turfdetails.css';
 
 const services = [
   {
     icon: FaLeaf,
-    title: 'Premium ZOD Turf Installation',
-    text: `Professional installation of ZOD turf with proper ground preparation, 
-           including soil grading, weed barrier placement, and secure anchoring 
-           for long-lasting results.`,
+    title: 'Premium Turf Installation',
+    text: `Expert installation of high-quality artificial or natural turf, including 
+           soil preparation, leveling, and seamless laying for a vibrant, long-lasting lawn.`,
   },
   {
     icon: FaRuler,
-    title: 'Custom Measurements & Layout',
-    text: `Precise site measurements and cutting plans to minimize seams and waste. 
-           Our team ensures perfect fit around landscaping features and structures.`,
+    title: 'Precision Layout & Cutting',
+    text: `Accurate site measurements and custom cuts ensure tight joins and a professional 
+           finish around edges, walkways, and landscape features.`,
+  },
+  {
+    icon: FaTruck,
+    title: 'Material Delivery & Site Prep',
+    text: `We handle all material logistics, including turf rolls, infill, and base material. 
+           Our team prepares the site for optimal drainage and compaction.`,
   },
   {
     icon: FaWater,
-    title: 'Irrigation System Integration',
-    text: `Seamless integration with existing irrigation systems or new installations 
-           to maintain optimal hydration for your ZOD turf.`,
+    title: 'Irrigation Compatibility',
+    text: `We assess and integrate with existing irrigation or offer drainage solutions for 
+           natural turf to ensure healthy, well-maintained lawns.`,
   },
-  {
-    icon: FaCheckCircle,
-    title: 'Quality Inspection & Warranty',
-    text: `Final inspection to ensure flawless installation with full manufacturer 
-           warranty coverage on materials and workmanship.`,
-  },
+ 
 ];
 
 export default function Turfdetails() {
@@ -42,11 +42,11 @@ export default function Turfdetails() {
       <div className="turfdetails__container">
         <header className="turfdetails__header">
           <h1 className="turfdetails__title">
-            Professional ZOD Turf Installation
+            Expert Turf Installation Services
           </h1>
           <p className="turfdetails__subtitle">
-            Certified specialists in precision ZOD turf installation—delivering 
-            flawless, durable surfaces with proper drainage and seamless edges.
+            Reliable, precise, and eco-conscious turf installation for residential and 
+            commercial properties—designed for beauty and built to last.
           </p>
         </header>
 
