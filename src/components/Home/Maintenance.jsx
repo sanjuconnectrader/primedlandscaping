@@ -76,11 +76,9 @@ const Maintenance = () => {
 
           <div className="maintenance-home-cta-group">
             <button type="button" className="maintenance-home-btn maintenance-home-btn-primary">
-              Explore Services
+              Get Started
             </button>
-            <button type="button" className="maintenance-home-btn maintenance-home-btn-secondary">
-              Get a Quote
-            </button>
+          
           </div>
         </div>
       </div>

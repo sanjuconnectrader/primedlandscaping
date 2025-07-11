@@ -188,12 +188,14 @@
 }
 
 .maintenance-home-btn-primary {
-  background: var(--primary-color);
+background: linear-gradient(90deg, #2a5f4b, #4caf7d);
+
   color: var(--white);
 }
 
 .maintenance-home-btn-primary:hover {
-  background: var(--primary-dark);
+ background: linear-gradient(90deg, #2a5f4b, #4caf7d);
+
   transform: translateY(-3px);
   box-shadow: var(--shadow-sm);
 }
@@ -266,5 +268,10 @@
   
   .maintenance-home__title {
     font-size: clamp(1.75rem, 7vw, 2.25rem);
+    margin-top: 60px;
+  }
+  .maintenance-home-btn {
+    border-radius: 10px;
+
   }
 }
