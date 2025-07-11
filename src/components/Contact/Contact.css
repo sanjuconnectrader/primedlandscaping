@@ -1,4 +1,4 @@
-/* Contact.css - Complete Responsive Version */
+/* Contact.css */
 
 /* Base Styles */
 .Contact-container {
@@ -8,28 +8,28 @@
     background-color: #f9f9f9;
     min-height: 100vh;
     margin-top: 90px;
-}
-
-.Contact-wrapper {
+  }
+  
+  .Contact-wrapper {
     max-width: 1400px;
     margin: 0 auto;
     padding: 2rem;
-}
-
-.Contact {
+  }
+  
+  .Contact {
     background: white;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     padding: 3rem;
-}
-
-.Contact-header {
+  }
+  
+  .Contact-header {
     text-align: center;
     margin-bottom: 3rem;
-}
-
-.Contact__title {
+  }
+  
+  .Contact__title {
     font-size: 2.5rem;
     font-weight: 700;
     color: #222;
@@ -38,136 +38,28 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-}
-
-.Contact__subtitle {
+  }
+  
+  .Contact__subtitle {
     font-size: 1.1rem;
     color: #666;
     max-width: 600px;
     margin: 0 auto;
-}
-
-/* Representatives Section */
-.Contact-reps-section {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 0 2rem;
-}
-
-.Contact-reps-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: #2a5f4b;
-    position: relative;
-    display: inline-block;
-}
-
-.Contact-reps-title::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, #2a5f4b, #4caf7d);
-    border-radius: 3px;
-}
-
-.Contact-reps-grid {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-}
-
-.Contact-rep-card {
-    background: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 350px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(42, 95, 75, 0.1);
-}
-
-.Contact-rep-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(42, 95, 75, 0.1);
-    border-color: rgba(76, 175, 125, 0.3);
-}
-
-.Contact-rep-avatar {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #2a5f4b, #4caf7d);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.5rem;
-    flex-shrink: 0;
-}
-
-.Contact-rep-icon {
-    width: 25px;
-    height: 25px;
-}
-
-.Contact-rep-details {
-    text-align: left;
-    flex: 1;
-}
-
-.Contact-rep-name {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.3rem;
-    color: #2a5f4b;
-}
-
-.Contact-rep-role {
-    font-size: 0.85rem;
-    color: #666;
-    margin-bottom: 0.5rem;
-    font-style: italic;
-}
-
-.Contact-rep-contact {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1rem;
-    color: #444;
-    font-weight: 500;
-}
-
-.Contact-rep-phone-icon {
-    color: #4caf7d;
-    font-size: 0.9rem;
-}
-
-/* Contact Content */
-.Contact-content {
+  }
+  
+  .Contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-}
-
-.Contact__info {
+  }
+  
+  .Contact__info {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-}
-
-.Contact__item {
+  }
+  
+  .Contact__item {
     display: flex;
     align-items: flex-start;
     gap: 1.5rem;
@@ -176,16 +68,16 @@
     transition: all 0.3s ease;
     background: rgba(250, 250, 250, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.Contact__item:hover {
+  }
+  
+  .Contact__item:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     background: white;
     border-color: rgba(76, 175, 125, 0.2);
-}
-
-.Contact__icon-circle {
+  }
+  
+  .Contact__icon-circle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,59 +87,59 @@
     background: linear-gradient(135deg, #2a5f4b, #4caf7d);
     color: white;
     flex-shrink: 0;
-}
-
-.Contact__icon {
+  }
+  
+  .Contact__icon {
     font-size: 1.2rem;
-}
-
-.Contact__item-content {
+  }
+  
+  .Contact__item-content {
     flex: 1;
-}
-
-.Contact__item-title {
+  }
+  
+  .Contact__item-title {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: #2a5f4b;
-}
-
-.Contact__item-text {
+  }
+  
+  .Contact__item-text {
     font-size: 1rem;
     color: #444;
     margin-bottom: 0.25rem;
-}
-
-.Contact__item-hours {
+  }
+  
+  .Contact__item-hours {
     font-size: 0.9rem;
     color: #777;
     font-style: italic;
-}
-
-/* Form Styles */
-.Contact__form {
+  }
+  
+  /* Form Styles */
+  .Contact__form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-}
-
-.Contact__form-group {
+  }
+  
+  .Contact__form-group {
     position: relative;
-}
-
-.double-field {
+  }
+  
+  .double-field {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
-}
-
-.Contact-form-field {
+  }
+  
+  .Contact-form-field {
     position: relative;
     margin-bottom: 1.5rem;
-}
-
-.Contact-form-field input,
-.Contact-form-field textarea {
+  }
+  
+  .Contact-form-field input,
+  .Contact-form-field textarea {
     width: 100%;
     padding: 1rem 0;
     font-size: 1rem;
@@ -256,14 +148,14 @@
     outline: none;
     background: transparent;
     transition: all 0.3s ease;
-}
-
-.Contact-form-field textarea {
+  }
+  
+  .Contact-form-field textarea {
     resize: vertical;
     min-height: 120px;
-}
-
-.Contact-form-field label {
+  }
+  
+  .Contact-form-field label {
     position: absolute;
     top: 1rem;
     left: 0;
@@ -271,18 +163,18 @@
     color: #999;
     pointer-events: none;
     transition: all 0.3s ease;
-}
-
-.Contact-form-field input:focus + label,
-.Contact-form-field input:not(:placeholder-shown) + label,
-.Contact-form-field textarea:focus + label,
-.Contact-form-field textarea:not(:placeholder-shown) + label {
+  }
+  
+  .Contact-form-field input:focus + label,
+  .Contact-form-field input:not(:placeholder-shown) + label,
+  .Contact-form-field textarea:focus + label,
+  .Contact-form-field textarea:not(:placeholder-shown) + label {
     top: -0.5rem;
     font-size: 0.8rem;
     color: #4caf7d;
-}
-
-.Contact-form-field-underline {
+  }
+  
+  .Contact-form-field-underline {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -290,18 +182,18 @@
     height: 2px;
     background: linear-gradient(90deg, #2a5f4b, #4caf7d);
     transition: width 0.4s ease;
-}
-
-.Contact-form-field input:focus ~ .Contact-form-field-underline,
-.Contact-form-field textarea:focus ~ .Contact-form-field-underline {
+  }
+  
+  .Contact-form-field input:focus ~ .Contact-form-field-underline,
+  .Contact-form-field textarea:focus ~ .Contact-form-field-underline {
     width: 100%;
-}
-
-.Contact__form-action {
+  }
+  
+  .Contact__form-action {
     margin-top: 1rem;
-}
-
-.Contact-btn {
+  }
+  
+  .Contact-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -313,247 +205,173 @@
     transition: all 0.3s ease;
     border: none;
     gap: 0.5rem;
-}
-
-.Contact-btn--primary {
+  }
+  
+  .Contact-btn--primary {
     background: linear-gradient(90deg, #2a5f4b, #4caf7d);
     color: white;
     box-shadow: 0 4px 15px rgba(42, 95, 75, 0.3);
-}
-
-.Contact-btn--primary:hover {
+  }
+  
+  .Contact-btn--primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(42, 95, 75, 0.4);
-}
-
-.Contact-btn--primary:active {
+  }
+  
+  .Contact-btn--primary:active {
     transform: translateY(0);
-}
-
-.Contact-btn-icon {
+  }
+  
+  .Contact-btn-icon {
     transition: transform 0.3s ease;
-}
-
-.Contact-btn:hover .Contact-btn-icon {
+  }
+  
+  .Contact-btn:hover .Contact-btn-icon {
     transform: translateX(3px);
-}
-
-/* Responsive Design */
+  }
+  
+/* Enhanced Responsive Design */
 @media (max-width: 1200px) {
-    .Contact-wrapper {
-        padding: 15px;
-    }
+  .Contact-wrapper {
+    padding: 15px;
+  }
 }
 
 @media (max-width: 1024px) {
-    .Contact-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .Contact__info {
-        grid-row: 2;
-    }
-    
-    .Contact-reps-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .Contact-rep-card {
-        max-width: 100%;
-    }
+  .Contact-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .Contact__info {
+    grid-row: 2;
+  }
 }
 
 @media (max-width: 900px) {
-    .Contact {
-        padding: 2.5rem;
-    }
-    
-    .Contact__title {
-        font-size: 2.2rem;
-    }
-    
-    .Contact-reps-title {
-        font-size: 1.7rem;
-    }
+  .Contact {
+    padding: 2.5rem;
+  }
+  
+  .Contact__title {
+    font-size: 2.2rem;
+  }
 }
 
 @media (max-width: 768px) {
-    .Contact {
-        padding: 2rem;
-    }
-    
-    .Contact__title {
-        font-size: 2rem;
-    }
-    
-    .Contact-reps-title {
-        font-size: 1.6rem;
-    }
-    
-    .double-field {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-    
-    .Contact__subtitle {
-        font-size: 1rem;
-    }
-    
-    .Contact-rep-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 1.5rem 1rem;
-    }
-    
-    .Contact-rep-details {
-        text-align: center;
-    }
-    
-    .Contact-rep-avatar {
-        margin-bottom: 1rem;
-    }
+  .Contact {
+    padding: 2rem;
+  }
+  
+  .Contact__title {
+    font-size: 2rem;
+  }
+  
+  .double-field {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .Contact__subtitle {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 640px) {
-    .Contact-container {
-        margin-top: 70px;
-        padding: 15px;
-    }
-    
-    .Contact {
-        padding: 1.8rem;
-    }
-    
-    .Contact__title {
-        font-size: 1.8rem;
-    }
-    
-    .Contact-reps-title {
-        font-size: 1.5rem;
-    }
-    
-    .Contact__item {
-        padding: 1.2rem;
-    }
-    
-    .Contact__icon-circle {
-        width: 45px;
-        height: 45px;
-    }
-    
-    .Contact-rep-avatar {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .Contact-rep-name {
-        font-size: 1.1rem;
-    }
+  .Contact-container {
+    margin-top: 70px;
+    padding: 15px;
+  }
+  
+  .Contact {
+    padding: 1.8rem;
+  }
+  
+  .Contact__title {
+    font-size: 1.8rem;
+  }
+  
+  .Contact__item {
+    padding: 1.2rem;
+  }
+  
+  .Contact__icon-circle {
+    width: 45px;
+    height: 45px;
+  }
 }
 
 @media (max-width: 480px) {
-    .Contact-container {
-        margin-top: 70px;
-    }
-    
-    .Contact-wrapper {
-        padding: 10px;
-    }
-    
-    .Contact {
-        padding: 1.5rem;
-    }
-    
-    .Contact__title {
-        font-size: 1.6rem;
-    }
-    
-    .Contact-reps-title {
-        font-size: 1.4rem;
-    }
-    
-    .Contact__item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 1rem;
-    }
-    
-    .Contact-btn {
-        padding: 0.9rem 1.8rem;
-        font-size: 0.95rem;
-    }
-    
-    .Contact-reps-section {
-        padding: 0;
-    }
+
+ .Contact-container {
+    margin-top: 70px;
+   
+  }
+  
+
+  .Contact-wrapper {
+    padding: 10px;
+  }
+  
+  .Contact {
+    padding: 1.5rem;
+  }
+  
+  .Contact__title {
+    font-size: 1.6rem;
+  }
+  
+  .Contact__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .Contact-btn {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 375px) {
-    .Contact-container {
-        margin-top: 60px;
-        padding: 10px;
-    }
-    
-    .Contact {
-        padding: 1.2rem;
-    }
-    
-    .Contact__title {
-        font-size: 1.5rem;
-    }
-    
-    .Contact-reps-title {
-        font-size: 1.3rem;
-    }
-    
-    .Contact__subtitle {
-        font-size: 0.95rem;
-    }
-    
-    .Contact__item-title {
-        font-size: 1.1rem;
-    }
-    
-    .Contact__item-text,
-    .Contact-form-field input,
-    .Contact-form-field textarea {
-        font-size: 0.95rem;
-    }
-    
-    .Contact-rep-card {
-        padding: 1.2rem 0.8rem;
-    }
+  .Contact-container {
+    margin-top: 60px;
+    padding: 10px;
+  }
+  
+  .Contact {
+    padding: 1.2rem;
+  }
+  
+  .Contact__title {
+    font-size: 1.5rem;
+  }
+  
+  .Contact__subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .Contact__item-title {
+    font-size: 1.1rem;
+  }
+  
+  .Contact__item-text,
+  .Contact-form-field input,
+  .Contact-form-field textarea {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 320px) {
-    .Contact__title {
-        font-size: 1.4rem;
-    }
-    
-    .Contact-reps-title {
-        font-size: 1.2rem;
-    }
-    
-    .Contact__subtitle {
-        font-size: 0.9rem;
-    }
-    
-    .Contact-btn {
-        width: 100%;
-    }
-    
-    .Contact-rep-avatar {
-        width: 45px;
-        height: 45px;
-    }
-    
-    .Contact-rep-name {
-        font-size: 1rem;
-    }
-    
-    .Contact-rep-contact {
-        font-size: 0.9rem;
-    }
+  .Contact__title {
+    font-size: 1.4rem;
+  }
+  
+  .Contact__subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .Contact-btn {
+    width: 100%;
+  }
 }

@@ -90,7 +90,7 @@ export default function Footer() {
               <div className="contact-icon__container">
                 <FaPhoneAlt className="contact-icon" />
               </div>
-              <span>425-428-8363</span>
+              <span>(206)-258-7535</span>
             </li>
             <li className="footer__contact-item">
               <div className="contact-icon__container">
