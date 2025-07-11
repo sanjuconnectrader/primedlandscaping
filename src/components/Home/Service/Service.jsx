@@ -9,14 +9,14 @@ const residential = [
     description: 'Complete lawn care and maintenance for your home'
   },
   {
-    title: 'Hardscaping',
+    title: 'Commercial',
     img: `${process.env.PUBLIC_URL}/service2.avif`,
-    description: 'Beautiful patios, walkways, and outdoor living spaces'
+    description: 'Well-designed landscapes, functional walkways, and inviting outdoor spaces that enhance your business appeal'
   },
   {
-    title: 'Pressure Washing',
+    title: 'HOA',
     img: `${process.env.PUBLIC_URL}/service3.avif`,
-    description: 'Restore your surfaces to their original beauty'
+    description: ' Bringing Back the Original Beauty of Your Surfaces'
   },
 ];
 
@@ -79,7 +79,7 @@ export default function Service() {
         <div className="services__category">
           <h3 className="services__subhead">
             <FaLeaf className="services__icon" />
-            Residential Services
+            Maintenance Service
           </h3>
           <div className="services__grid">
             {residential.map((card) => (
