@@ -11,12 +11,12 @@ const residential = [
   {
     title: 'Commercial',
     img: `${process.env.PUBLIC_URL}/service2.avif`,
-    description: 'Well-designed landscapes, functional walkways'
+    description: 'visually appealing landscaping for your business'
   },
   {
     title: 'HOA',
     img: `${process.env.PUBLIC_URL}/service3.avif`,
-    description: ' Bringing Back the Original Beauty of Your Surfaces'
+    description: 'lawncare service that makes your HOA a home'
   },
 ];
 
@@ -91,7 +91,7 @@ export default function Service() {
         <div className="services__category">
           <h3 className="services__subhead">
             <FaBuilding className="services__icon" />
-            Commercial Services
+            Other Services
           </h3>
           <div className="services__grid">
             {commercial.map((card) => (
