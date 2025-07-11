@@ -7,19 +7,22 @@ const slides = [
     image: `${process.env.PUBLIC_URL}/Resedentialland.avif`,
     title: 'Residential Landscaping Maintenance',
     subtitle: 'Beautiful yards tailored for every home',
-    cta: 'Explore Services'
+    cta: 'Explore Services',
+    link: '/services/residential-maintenance',
   },
   {
     image: `${process.env.PUBLIC_URL}/commercialland.avif`,
-    title: 'Professional Pressure Washing',
+    title: 'Commercial Landscaping Maintenance',
     subtitle: 'Restore the clean look of your property',
-    cta: 'Discover Options'
+    cta: 'Discover Options',
+    link: '/services/commercial-maintenance',
   },
   {
     image: `${process.env.PUBLIC_URL}/pressurewashing.avif`,
-    title: 'Sustainable Land Management',
+    title: 'HOA Landscaping Maintenance',
     subtitle: 'Eco‑friendly solutions for modern landscapes',
-    cta: 'Learn More'
+    cta: 'Learn More',
+    link: '/services/hoa-maintenance',
   },
 ];
 
@@ -31,16 +34,7 @@ export default function Header() {
   const [isAnimating, setIsAnimating] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
-  useEffect(() => {
-    if (isHovered) return;
-
-    const timer = setInterval(() => {
-      handleTransition((current + 1) % slides.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [current, isHovered]);
-
+  // Transition logic (must be declared before useEffect)
   const handleTransition = useCallback((next) => {
     if (isAnimating || next === current) return;
 
@@ -54,6 +48,17 @@ export default function Header() {
 
     return () => clearTimeout(timer);
   }, [current, isAnimating]);
+
+  // Autoplay slide unless hovered
+  useEffect(() => {
+    if (isHovered) return;
+
+    const timer = setInterval(() => {
+      handleTransition((current + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [current, isHovered, handleTransition]);
 
   const handleIndicatorClick = (index) => {
     handleTransition(index);
@@ -76,7 +81,7 @@ export default function Header() {
         style={{ backgroundImage: `url(${slides[current].image})` }}
       />
 
-      {/* Content overlay */}
+      {/* Overlay Content */}
       <div className="header__overlay">
         <div className="header__content">
           <div className={`header__text ${isAnimating ? 'slide-up' : 'slide-down'}`}>
@@ -84,12 +89,13 @@ export default function Header() {
             <h1 className="header__title">{slides[current].title}</h1>
           </div>
 
-          <button className="btn header__btn">
+          {/* CTA Button with Link */}
+          <a href={slides[current].link} className="btn header__btn">
             {slides[current].cta} <FaArrowRight className="btn__icon" />
-          </button>
+          </a>
         </div>
 
-        {/* Indicators */}
+        {/* Slide Indicators */}
         <div className="header__indicators">
           {slides.map((_, index) => (
             <button

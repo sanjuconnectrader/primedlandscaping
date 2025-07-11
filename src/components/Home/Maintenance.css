@@ -1,0 +1,270 @@
+/* MaintenanceHome Section - High-End UI with Montserrat */
+
+/* 1. Font & design tokens */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #2a6f4c;
+  --primary-dark: #1e5638;
+  --primary-light: rgba(42, 111, 76, 0.1);
+  --accent-color: #f8b400;
+  --text-color: #333;
+  --text-light: #666;
+  --light-bg: #f9f9f7;
+  --white: #fff;
+  --black: #000;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.16);
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --max-width: 1200px;
+  --border-radius: 16px;
+  --border-radius-sm: 8px;
+  --section-padding: clamp(4rem, 8vw, 8rem) clamp(2rem, 5vw, 4rem);
+}
+
+/* 2. Base styles */
+.maintenance-home {
+  padding: var(--section-padding);
+  background: var(--light-bg);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 3. Container layout */
+.maintenance-home__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(3rem, 6vw, 8rem);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* 4. Media grid (left side) */
+.maintenance-home-media-grid {
+  display: grid;
+  grid-template-areas:
+    "img1 img2"
+    "img3 img3";
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.maintenance-home-media-grid__item {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.maintenance-home-media-grid__item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.maintenance-home-media-grid__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.maintenance-home-img1 { 
+  grid-area: img1;
+  aspect-ratio: 4/5;
+}
+
+.maintenance-home-img2 { 
+  grid-area: img2;
+  aspect-ratio: 4/5;
+}
+
+.maintenance-home-img3 {
+  grid-area: img3;
+  aspect-ratio: 16/7;
+}
+
+.maintenance-home-media-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+  color: var(--white);
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: var(--transition);
+}
+
+.maintenance-home-media-grid__item:hover .maintenance-home-media-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 5. Content (right side) */
+.maintenance-home__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.maintenance-home-section-subtitle {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-bottom: -0.5rem;
+}
+
+.maintenance-home__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.maintenance-home-content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.maintenance-home-content-block {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.maintenance-home-block-icon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+.maintenance-home-block-text {
+  font-size: clamp(1rem, 1.8vw, 1.125rem);
+  line-height: 1.7;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* 6. CTA buttons */
+.maintenance-home-cta-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.maintenance-home-btn {
+  padding: 1rem 2.25rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.maintenance-home-btn-primary {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.maintenance-home-btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.maintenance-home-btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.maintenance-home-btn-secondary:hover {
+  background: var(--primary-light);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* 7. Responsive design */
+@media (max-width: 1024px) {
+  .maintenance-home__container {
+    gap: clamp(2rem, 4vw, 4rem);
+  }
+  
+  .maintenance-home-cta-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .maintenance-home-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .maintenance-home {
+    padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 3rem);
+  }
+  
+  .maintenance-home__container {
+    grid-template-columns: 1fr;
+  }
+  
+  .maintenance-home-media-grid {
+    order: -1;
+    max-height: 500px;
+  }
+  
+  .maintenance-home__content {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .maintenance-home-content-block {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .maintenance-home-media-grid {
+    grid-template-areas:
+      "img1"
+      "img2"
+      "img3";
+    grid-template-columns: 1fr;
+  }
+  
+  .maintenance-home-img1, .maintenance-home-img2, .maintenance-home-img3 {
+    aspect-ratio: 16/9;
+  }
+  
+  .maintenance-home__title {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+  }
+}

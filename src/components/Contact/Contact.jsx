@@ -1,20 +1,51 @@
 import React from 'react';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaUserTie } from 'react-icons/fa';
 import './Contact.css';
-
 
 const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    
     alert('Your message has been sent!');
   };
 
   return (
     <div className="Contact-container">
-   
       <div className="Contact-wrapper">
         <section className="Contact">
+          {/* Representatives Section */}
+          <div className="Contact-reps-section">
+         
+            <div className="Contact-reps-grid">
+              <div className="Contact-rep-card">
+                <div className="Contact-rep-avatar">
+                  <FaUserTie className="Contact-rep-icon" />
+                </div>
+                <div className="Contact-rep-details">
+                  <h4 className="Contact-rep-name">John Doe</h4>
+                  <p className="Contact-rep-role">Senior Consultant</p>
+                  <div className="Contact-rep-contact">
+                    <FaPhoneAlt className="Contact-rep-phone-icon" />
+                    <span>777-555-666-77</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="Contact-rep-card">
+                <div className="Contact-rep-avatar">
+                  <FaUserTie className="Contact-rep-icon" />
+                </div>
+                <div className="Contact-rep-details">
+                  <h4 className="Contact-rep-name">Alex Smith</h4>
+                  <p className="Contact-rep-role">Project Manager</p>
+                  <div className="Contact-rep-contact">
+                    <FaPhoneAlt className="Contact-rep-phone-icon" />
+                    <span>888-666-44-33</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="Contact-header">
             <h2 className="Contact__title">
               Get In Touch With Us
