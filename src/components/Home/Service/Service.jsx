@@ -4,7 +4,7 @@ import './Service.css';
 
 const residential = [
   {
-    title: 'Residential Maintenance',
+    title: 'Residential ',
     img: `${process.env.PUBLIC_URL}/service1.avif`,
     description: 'Complete lawn care and maintenance for your home'
   },
