@@ -123,7 +123,7 @@ const Navbar = () => {
     },
     {
       name: "Lawn Recovery Package",
-      icon: <FaLeaf />,
+      icon: <GiPlantWatering />,
       link: "/services/lawn-recovery-package",
     },
   ];
