@@ -45,7 +45,7 @@ const commercial = [
   {
     title: 'Sod Installation',
     img: `${process.env.PUBLIC_URL}/sod.jpg`,
-    description: 'Durable and attractive commercial hardscapes',
+    description: 'Cutting‑Edge Hybrid Sod Turf System',
     link: '/services/sod-installation'
   },
 ];

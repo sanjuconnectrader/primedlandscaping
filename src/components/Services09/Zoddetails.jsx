@@ -11,7 +11,7 @@ import './Zoddetails.css';
 const services = [
   {
     icon: FaLeaf,
-    title: 'Next-Gen ZOD Hybrid Turf System',
+    title: 'Next-Gen SOD Hybrid Turf System',
     text: `Installation of the newest hybrid-blade ZOD turf featuring triple-layer
            backing, UV-stabilised fibres, and natural multi-tone colouring for
            unrivalled realism and longevity.`,
