@@ -18,6 +18,9 @@
   gap: 3rem;
   margin-bottom: 3rem;
 }
+.turfhome__cta{
+  text-decoration: none;
+}
 
 /* ───────────── Intro Section ───────────── */
 .turfhome__intro {

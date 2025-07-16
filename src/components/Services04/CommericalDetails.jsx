@@ -6,9 +6,11 @@ import {
   FaSeedling,
   FaTint,
   FaTrashAlt,
-  FaMagic, // FaMagic is not used in your data, but imported
+  FaMagic,
+  FaPhoneAlt
 } from 'react-icons/fa';
-import './CommericalDetails.css'; // Make sure this path is correct
+import './CommericalDetails.css';
+import LawnPackage from './LawnPackage';
 
 const commercialServices = [
   {
@@ -67,7 +69,11 @@ export default function CommercialDetails() {
             </div>
           ))}
         </div>
+
+        {/* Added Lawn Recovery Section */}
+      
       </div>
+      <LawnPackage/>
     </section>
   );
 }

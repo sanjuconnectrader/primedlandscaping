@@ -4,43 +4,55 @@ import './Service.css';
 
 const residential = [
   {
-    title: 'Residential ',
+    title: 'Residential',
     img: `${process.env.PUBLIC_URL}/service1.avif`,
-    description: 'Complete lawn care and maintenance for your home'
+    description: 'Complete lawn care and maintenance for your home',
+    link: '/services/residential-maintenance'
   },
   {
     title: 'Commercial',
     img: `${process.env.PUBLIC_URL}/service2.avif`,
-    description: 'visually appealing landscaping for your business'
+    description: 'visually appealing landscaping for your business',
+    link: '/services/commercial-maintenance'
   },
   {
     title: 'HOA',
     img: `${process.env.PUBLIC_URL}/service3.avif`,
-    description: 'lawncare service that makes your HOA a home'
+    description: 'lawncare service that makes your HOA a home',
+    link: '/services/hoa-maintenance'
   },
 ];
 
 const commercial = [
   {
-    title: 'Commercial Maintenance',
-    img: `${process.env.PUBLIC_URL}/service4.avif`,
-    description: 'Professional care for business properties'
+    title: 'Turf Installation',
+    img: `${process.env.PUBLIC_URL}/turf.jpg`,
+    description: 'Professional turf‑installation services for properties',
+    link: '/services/turf-installation'
   },
   {
-    title: 'HOA Maintenance',
-    img: `${process.env.PUBLIC_URL}/service5.avif`,
-    description: 'Community landscaping services'
+    title: 'Irrigation',
+    img: `${process.env.PUBLIC_URL}/irrigation1.jpg`,
+    description: 'Expert irrigation systems that keep your lawn lush ',
+    link: '/services/irrigation'
   },
   {
-    title: 'Hardscaping',
+    title: 'Lawn Recovery',
     img: `${process.env.PUBLIC_URL}/service6.avif`,
-    description: 'Durable and attractive commercial hardscapes'
+    description: 'Comprehensive process ensures optimal lawn health',
+    link: '/services/lawn-recovery-package'
+  },
+  {
+    title: 'Sod Installation',
+    img: `${process.env.PUBLIC_URL}/sod.jpg`,
+    description: 'Durable and attractive commercial hardscapes',
+    link: '/services/sod-installation'
   },
 ];
 
-function ServiceCard({ title, img, description }) {
+function ServiceCard({ title, img, description, link }) {
   return (
-    <article className="svc-card">
+    <div className="svc-card">
       <div className="svc-card__img-container">
         <img 
           src={img} 
@@ -52,14 +64,14 @@ function ServiceCard({ title, img, description }) {
           <div className="svc-card__content">
             <h3 className="svc-card__title">{title}</h3>
             <p className="svc-card__description">{description}</p>
-            <button className="svc-card__btn">
+            <a href={link} className="svc-card__btn">
               <span>Learn more</span>
               <FaArrowRight className="svc-card__icon" />
-            </button>
+            </a>
           </div>
         </div>
       </div>
-    </article>
+    </div>
   );
 }
 
@@ -81,9 +93,15 @@ export default function Service() {
             <FaLeaf className="services__icon" />
             Maintenance Service
           </h3>
-          <div className="services__grid">
+          <div className="services__grid services__grid--residential">
             {residential.map((card) => (
-              <ServiceCard key={card.title} {...card} />
+              <ServiceCard 
+                key={`${card.title}-${card.description}`} 
+                title={card.title}
+                img={card.img}
+                description={card.description}
+                link={card.link}
+              />
             ))}
           </div>
         </div>
@@ -91,11 +109,17 @@ export default function Service() {
         <div className="services__category">
           <h3 className="services__subhead">
             <FaBuilding className="services__icon" />
-            Other Services
+           Other Services
           </h3>
-          <div className="services__grid">
+          <div className="services__grid services__grid--commercial">
             {commercial.map((card) => (
-              <ServiceCard key={card.title} {...card} />
+              <ServiceCard 
+                key={`${card.title}-${card.description}`} 
+                title={card.title}
+                img={card.img}
+                description={card.description}
+                link={card.link}
+              />
             ))}
           </div>
         </div>

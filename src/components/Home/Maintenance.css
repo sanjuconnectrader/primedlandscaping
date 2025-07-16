@@ -152,7 +152,7 @@
   flex-shrink: 0;
   width: 2rem;
   height: 2rem;
-  background: var(--primary-color);
+  background: linear-gradient(90deg, #2a5f4b, #4caf7d);
   color: var(--white);
   border-radius: 50%;
   display: flex;
@@ -163,6 +163,11 @@
   margin-top: 0.25rem;
 }
 
+
+
+.maintenance-home-btn{
+  text-decoration: none;
+}
 .maintenance-home-block-text {
   font-size: clamp(1rem, 1.8vw, 1.125rem);
   line-height: 1.7;
@@ -179,7 +184,7 @@
 
 .maintenance-home-btn {
   padding: 1rem 2.25rem;
-  border-radius: 50px;
+  border-radius: 5px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;

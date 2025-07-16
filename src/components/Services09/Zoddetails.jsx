@@ -43,7 +43,7 @@ export default function Zoddetails() {
       <div className="zoddetails__container">
         <header className="zoddetails__header">
           <h1 className="zoddetails__title">
-            Professional ZOD Installation Services
+            Professional SOD Installation Services
           </h1>
           <p className="zoddetails__subtitle">
             Certified specialists delivering precision ZOD turf systems with

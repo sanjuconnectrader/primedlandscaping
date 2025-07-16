@@ -6,6 +6,7 @@ import {
   FaLeaf,
   FaAward
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 /* ------------------------------------------------------------------
  *  Key selling points for the landscaping business
@@ -63,9 +64,9 @@ export default function Choose() {
             ))}
           </div>
 
-          <button className="choose__btn">
-            Get a free quote <span className="btn-arrow">→</span>
-          </button>
+         <Link to="/contact" className="choose__btn">
+  Get a free quote <span className="btn-arrow">→</span>
+</Link>
         </div>
 
         {/* -------- Right side: hero image -------- */}

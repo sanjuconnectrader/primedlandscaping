@@ -43,15 +43,11 @@ export default function Footer() {
               </Link>
             </li>
             <li className="footer__list-item">
-              <Link to="/about-us" className="footer__link">
+              <Link to="/about/who-we-are" className="footer__link">
                 <FaAngleRight className="link-icon" /> About Us
               </Link>
             </li>
-            <li className="footer__list-item">
-              <Link to="/services" className="footer__link">
-                <FaAngleRight className="link-icon" /> Services
-              </Link>
-            </li>
+         
             <li className="footer__list-item">
               <Link to="/contact" className="footer__link">
                 <FaAngleRight className="link-icon" /> Contact
@@ -65,19 +61,39 @@ export default function Footer() {
           <h4 className="footer__title">Our Services</h4>
           <ul className="footer__list">
             <li className="footer__list-item">
-              <FaAngleRight className="link-icon" /> Landscaping Maintenance
+              <Link to="/services/residential-maintenance" className="footer__link">
+                <FaAngleRight className="link-icon" /> Residential Maintenance
+              </Link>
             </li>
             <li className="footer__list-item">
-              <FaAngleRight className="link-icon" /> Pressure Washing
+              <Link to="/services/commercial-maintenance" className="footer__link">
+                <FaAngleRight className="link-icon" /> Commercial Maintenance
+              </Link>
             </li>
             <li className="footer__list-item">
-              <FaAngleRight className="link-icon" /> Thatching & Aeration
+              <Link to="/services/hoa-maintenance" className="footer__link">
+                <FaAngleRight className="link-icon" /> HOA Maintenance
+              </Link>
             </li>
             <li className="footer__list-item">
-              <FaAngleRight className="link-icon" /> Hardscaping Solutions
+              <Link to="/services/turf-installation" className="footer__link">
+                <FaAngleRight className="link-icon" /> Turf Installation
+              </Link>
             </li>
             <li className="footer__list-item">
-              <FaAngleRight className="link-icon" /> HOA Maintenance
+              <Link to="/services/sod-installation" className="footer__link">
+                <FaAngleRight className="link-icon" /> Sod Installation
+              </Link>
+            </li>
+            <li className="footer__list-item">
+              <Link to="/services/lawn-recovery-package" className="footer__link">
+                <FaAngleRight className="link-icon" /> Lawn Recovery Package
+              </Link>
+            </li>
+            <li className="footer__list-item">
+              <Link to="/services/irrigation" className="footer__link">
+                <FaAngleRight className="link-icon" /> Irrigation
+              </Link>
             </li>
           </ul>
         </div>

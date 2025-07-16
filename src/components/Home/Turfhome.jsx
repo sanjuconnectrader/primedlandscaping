@@ -6,6 +6,7 @@ import {
   GiWaterDrop       // irrigation & after-care icon
 } from "react-icons/gi";
 import "./Turfhome.css";
+import { Link } from "react-router-dom";
 
 const Turfhome = () => {
   const features = [
@@ -51,10 +52,10 @@ const Turfhome = () => {
               We lay premium, climate-matched sod with seamless joins that vanish in days. Smart irrigation calibration locks in moisture and encourages deep rooting from day one. A personalized care plan and follow-up visit ensure your new lawn stays vibrant through every season. Best of all, our workmanship warranty lets you kick off your shoes and relax, knowing your fresh green carpet is built to last.
             </p>
 
-            <button className="turfhome__cta">
-              Get a Quote
-              <span className="cta-arrow">→</span>
-            </button>
+           <Link to="/contact" className="turfhome__cta">
+  Get a Quote
+  <span className="cta-arrow">→</span>
+</Link>
           </div>
 
           {/* ─── Feature Cards Column ──────────────────── */}

@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -37,7 +38,9 @@ const About = () => {
               themselves.
             </p>
           </div>
-          <button className="about__ctaa">Learn More About Our Services</button>
+          <Link to="/#services" className="about__ctaa">
+            Learn More About Our Services
+          </Link>
         </div>
       </div>
     </section>

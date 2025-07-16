@@ -267,3 +267,98 @@
         font-size: 1.15rem;
     }
 }
+
+
+
+/* All existing CSS remains exactly the same */
+
+/* Add these new styles at the bottom of the file */
+.CommercialDetails__recovery {
+  text-align: center;
+  margin-top: 60px;
+  padding: 40px;
+  background-color: var(--primary-light);
+  border-radius: var(--border-radius);
+}
+
+.CommercialDetails__recovery-text {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.CommercialDetails__cta-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-light);
+}
+
+.CommercialDetails__cta-button:hover {
+  background-color: var(--text-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
+}
+
+.CommercialDetails__cta-icon {
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments for new elements */
+@media (max-width: 1024px) {
+  .CommercialDetails__recovery {
+    margin-top: 50px;
+    padding: 30px;
+  }
+  
+  .CommercialDetails__recovery-text {
+    font-size: 1.15rem;
+  }
+  
+  .CommercialDetails__cta-button {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .CommercialDetails__recovery {
+    margin-top: 40px;
+    padding: 25px;
+  }
+  
+  .CommercialDetails__recovery-text {
+    font-size: 1.05rem;
+  }
+  
+  .CommercialDetails__cta-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .CommercialDetails__recovery {
+    margin-top: 30px;
+    padding: 20px;
+  }
+  
+  .CommercialDetails__recovery-text {
+    font-size: 0.95rem;
+  }
+  
+  .CommercialDetails__cta-button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}

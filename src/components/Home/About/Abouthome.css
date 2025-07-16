@@ -253,3 +253,8 @@
         font-size: 1.125rem;
     }
 }
+
+
+.about__button{
+    text-decoration: none;
+}

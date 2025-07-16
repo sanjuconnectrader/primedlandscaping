@@ -1,5 +1,6 @@
 import React from "react";
 import "./Maintenance.css";
+import { Link } from "react-router-dom";
 
 const Maintenance = () => {
   /* Swap these for real, optimised WebP/AVIF assets */
@@ -75,10 +76,13 @@ const Maintenance = () => {
           </div>
 
           <div className="maintenance-home-cta-group">
-            <button type="button" className="maintenance-home-btn maintenance-home-btn-primary">
+            <Link
+              to="/contact"
+              className="maintenance-home-btn maintenance-home-btn-primary"
+            >
               Get Started
-            </button>
-          
+            </Link>
+
           </div>
         </div>
       </div>

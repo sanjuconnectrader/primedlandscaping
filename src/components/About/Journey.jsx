@@ -1,5 +1,6 @@
 import React from 'react';
 import './Journey.css';
+import Schedule from './Schedule';
 
 const Journey = () => (
   <section className="Journey">
@@ -84,6 +85,7 @@ const Journey = () => (
         </p>
       </article>
     </div>
+    <Schedule/>
   </section>
 );
 

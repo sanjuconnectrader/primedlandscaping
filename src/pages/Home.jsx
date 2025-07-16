@@ -9,6 +9,8 @@ import Choose from '../components/Home/Choose/Choose'
 import Turfhome from '../components/Home/Turfhome'
 import Appointment from '../components/About/Appointment'
 import Maintenance from '../components/Home/Maintenance'
+import CommercialHome from '../components/Home/Commercial'
+
 
 const Home = () => {
     return (
@@ -17,9 +19,12 @@ const Home = () => {
             <Header />
             <Abouthome />
             <Service />
+          
+         
             <Choose />
             <Turfhome />
             <Maintenance />
+
 
             <Client />
             <Footer />

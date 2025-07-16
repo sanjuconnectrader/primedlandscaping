@@ -9,6 +9,7 @@ import {
   FaTint,
 } from 'react-icons/fa';
 import './HoaLandscapingDetails.css'; // Ensure this path is correct
+import LawnPackageone from './LawnPackageone';
 
 const services = [
   {
@@ -54,13 +55,7 @@ const services = [
            community spotless. Our systematic approach ensures pristine common areas that residents 
            can take pride in every day.`,
   },
-  {
-    icon: FaTint,
-    title: 'Irrigation System (Add-On)',
-    text: `We test, repair and optimize sprinkler systems for maximum efficiency. With smart seasonal 
-           adjustments and water-saving technologies, we maintain lush landscapes while reducing 
-           environmental impact and utility costs.`,
-  },
+
 ];
 
 export default function HoaLandscapingDetails() {
@@ -91,6 +86,7 @@ export default function HoaLandscapingDetails() {
           ))}
         </div>
       </div>
+      <LawnPackageone/>
     </section>
   );
 }
