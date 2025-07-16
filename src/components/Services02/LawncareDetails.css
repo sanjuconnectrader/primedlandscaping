@@ -117,7 +117,6 @@
   box-shadow: var(--shadow-lg);
 }
 
-/* Replace the existing .rl-service-badge styles with these */
 .rl-service-badge {
   position: absolute;
   top: 40px;
@@ -134,11 +133,9 @@
   letter-spacing: 1px;
   width: 150px;
   text-align: center;
-  right: -48px; /* Adjusted to show more of the badge */
+  right: -48px;
 }
-.rl-cta-button{
-  text-decoration: none;
-}
+
 .rl-service-header {
   display: flex;
   align-items: center;
@@ -355,13 +352,48 @@
   font-size: 1.2rem;
   color: var(--text-medium);
   margin-bottom: var(--spacing-lg);
-  max-width: 600px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.6;
+}
+
+.rl-cta-services {
+  margin-bottom: var(--spacing-xl);
+}
+
+.rl-cta-services p {
+  color: var(--text-medium);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.1rem;
+}
+
+.rl-service-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.rl-service-link {
+  color: var(--primary-green-dark);
+  text-decoration: none;
+  font-weight: 600;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+  border: 1px solid var(--primary-green);
+}
+
+.rl-service-link:hover {
+  background-color: var(--primary-green);
+  color: var(--white);
+  transform: translateY(-2px);
 }
 
 .rl-cta-button {
-   background: linear-gradient(90deg, #2a5f4b, #4caf7d);
+  background: linear-gradient(90deg, #2a5f4b, #4caf7d);
   color: var(--white);
   border: none;
   padding: var(--spacing-sm) var(--spacing-xl);
@@ -370,11 +402,12 @@
   border-radius: 5px;
   cursor: pointer;
   transition: var(--transition-medium);
-
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
   overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .rl-cta-button::before {
@@ -447,6 +480,11 @@
   
   .rl-cta-subtitle {
     font-size: 1.1rem;
+  }
+
+  .rl-service-links {
+    flex-direction: column;
+    align-items: center;
   }
 }
 

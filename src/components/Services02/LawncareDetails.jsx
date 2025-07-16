@@ -16,9 +16,7 @@ import {
   FaWater,
 } from 'react-icons/fa';
 import './LawncareDetails.css';
-
-import { Link } from "react-router-dom";   // add this at the top of your file
-
+import { Link } from "react-router-dom";
 
 const residentialServices = [
   {
@@ -56,105 +54,83 @@ const residentialServices = [
     ],
     badge: 'Most Flexible',
   },
-{
-  icon: FaSeedling,
-  title:
-    'Small Residential Package (0.00 – 0.25 Acres) – Starts at $249/month',
-  content: [
-    'Perfect for smaller properties, this package offers essential weekly maintenance to keep your yard looking clean and well‑maintained. With all packages, you can add unique services for an additional cost.',
-  ],
-  features: [
-    {
-      icon: FaCut,
-      text:
-        'Mowing – Keeps your lawn at the right height, encouraging healthy growth and preventing thatch buildup.',
-    },
-    {
-      icon: FaLeaf,
-      text:
-        'Edging – Defines borders along sidewalks, driveways, and garden beds to maintain a crisp, clean look.',
-    },
-    {
-      icon: FaTrashAlt,
-      text:
-        'Blowing Off Debris – Clears leaves, grass clippings, and dirt from all hard surfaces to maintain a neat appearance.',
-    },
-    {
-      icon: FaSeedling,
-      text:
-        'Weeding & Flower Bed Control – Regular weeding prevents unwanted plants from overtaking your garden.',
-    },
-    {
-      icon: FaTree,
-      text:
-        'Trimming – Shapes shrubs, bushes, and small trees, keeping your landscape neat and uniform.',
-    },
-    {
-      icon: FaLeaf,
-      text:
-        'Raking Fallen Leaves – Regular leaf raking prevents buildup that can smother your grass, keeping your lawn healthy and looking neat.',
-    },
-    {
-      icon: FaTint,
-      text:
-        'Quarterly Fertilization (add‑on) – This service provides essential nutrients to your lawn, ensuring it stays lush and healthy throughout the year.',
-    },
-    // 👉 NEW
-    {
-      icon: FaWater,
-      text:
-        'Irrigation System Check – We inspect and tune your sprinklers to ensure efficient watering, preventing dry spots and water waste.',
-    },
-    // 👉 NEW
-    {
-      icon: FaPlusCircle,
-      text:
-        'Seasonal Planting Advice – Personalized guidance on seasonal flowers and plants to keep your landscape vibrant all year.',
-    },
-  ],
-  badge: 'Popular Choice',
-},
-
- {
-  icon: FaCheckCircle,
-  title: 'Why Choose Primed Landscaping?',
-  features: [
-    {
-      icon: FaCalendarAlt,
-      text:
-        'Weekly Maintenance in All Seasons – Ensures that your property stays looking great year‑round, regardless of the season.',
-    },
-    {
-      icon: FaDollarSign,
-      text:
-        'Equal Monthly Payments – A predictable, stable cost each month makes budgeting for lawn care simple and straightforward.',
-    },
-    {
-      icon: FaCheckCircle,
-      text:
-        'One‑Year Contract with First Month No Commitment – Try our services for a month with no obligation before committing to the full year.',
-    },
-    {
-      icon: FaHome,
-      text:
-        "Full Property Maintenance – Covers all aspects of lawn care and landscape maintenance, so you don't need to worry about a thing.",
-    },
-    // 👉 NEW
-    {
-      icon: FaSeedling,
-      text:
-        'Eco‑Friendly Practices – We use organic products and water‑smart methods to keep your lawn healthy, safe for kids and pets, and kind to the planet.',
-    },
-    // 👉 NEW
-    {
-      icon: FaStar,
-      text:
-        '100 % Satisfaction Guarantee – Our crew isn’t finished until you are delighted, ensuring consistent, top‑quality results every visit.',
-    },
-  ],
-  closing: `Choose our residential lawn care packages for professional, hassle‑free maintenance that will keep your property looking its best. Contact us today to set up a customized plan tailored to your needs. Unlike other landscapers' packages, we allow you to add unique services for an additional cost.`,
-}
-
+  {
+    icon: FaSeedling,
+    title: 'Small Residential Package (0.00 – 0.25 Acres) – Starts at $249/month',
+    content: [
+      'Perfect for smaller properties, this package offers essential weekly maintenance to keep your yard looking clean and well‑maintained. With all packages, you can add unique services for an additional cost.',
+    ],
+    features: [
+      {
+        icon: FaCut,
+        text: 'Mowing – Keeps your lawn at the right height, encouraging healthy growth and preventing thatch buildup.',
+      },
+      {
+        icon: FaLeaf,
+        text: 'Edging – Defines borders along sidewalks, driveways, and garden beds to maintain a crisp, clean look.',
+      },
+      {
+        icon: FaTrashAlt,
+        text: 'Blowing Off Debris – Clears leaves, grass clippings, and dirt from all hard surfaces to maintain a neat appearance.',
+      },
+      {
+        icon: FaSeedling,
+        text: 'Weeding & Flower Bed Control – Regular weeding prevents unwanted plants from overtaking your garden.',
+      },
+      {
+        icon: FaTree,
+        text: 'Trimming – Shapes shrubs, bushes, and small trees, keeping your landscape neat and uniform.',
+      },
+      {
+        icon: FaLeaf,
+        text: 'Raking Fallen Leaves – Regular leaf raking prevents buildup that can smother your grass, keeping your lawn healthy and looking neat.',
+      },
+      {
+        icon: FaTint,
+        text: 'Quarterly Fertilization (add‑on) – This service provides essential nutrients to your lawn, ensuring it stays lush and healthy throughout the year.',
+      },
+      {
+        icon: FaWater,
+        text: 'Irrigation System Check – We inspect and tune your sprinklers to ensure efficient watering, preventing dry spots and water waste.',
+      },
+      {
+        icon: FaPlusCircle,
+        text: 'Seasonal Planting Advice – Personalized guidance on seasonal flowers and plants to keep your landscape vibrant all year.',
+      },
+    ],
+    badge: 'Popular Choice',
+  },
+  {
+    icon: FaCheckCircle,
+    title: 'Why Choose Primed Landscaping?',
+    features: [
+      {
+        icon: FaCalendarAlt,
+        text: 'Weekly Maintenance in All Seasons – Ensures that your property stays looking great year‑round, regardless of the season.',
+      },
+      {
+        icon: FaDollarSign,
+        text: 'Equal Monthly Payments – A predictable, stable cost each month makes budgeting for lawn care simple and straightforward.',
+      },
+      {
+        icon: FaCheckCircle,
+        text: 'One‑Year Contract with First Month No Commitment – Try our services for a month with no obligation before committing to the full year.',
+      },
+      {
+        icon: FaHome,
+        text: "Full Property Maintenance – Covers all aspects of lawn care and landscape maintenance, so you don't need to worry about a thing.",
+      },
+      {
+        icon: FaSeedling,
+        text: 'Eco‑Friendly Practices – We use organic products and water‑smart methods to keep your lawn healthy, safe for kids and pets, and kind to the planet.',
+      },
+      {
+        icon: FaStar,
+        text: '100 % Satisfaction Guarantee – Our crew isn’t finished until you are delighted, ensuring consistent, top‑quality results every visit.',
+      },
+    ],
+    closing: `Choose our residential lawn care packages for professional, hassle‑free maintenance that will keep your property looking its best. Contact us today to set up a customized plan tailored to your needs. Unlike other landscapers' packages, we allow you to add unique services for an additional cost.`,
+  }
 ];
 
 export default function ResidentialLawncare() {
@@ -231,10 +207,20 @@ export default function ResidentialLawncare() {
       
       <div className="rl-cta-section">
         <h2 className="rl-cta-title">Ready to Transform Your Lawn?</h2>
-        <p className="rl-cta-subtitle">Contact us today for a free consultation and estimate. Our friendly experts will assess your property, answer any questions, and design a maintenance plan tailored to your needs and budget. Book a visit now and see how easy it is to enjoy a lush, healthy yard all year long—your dream lawn is just a call or click away!</p>
-       <Link to="/contact" className="rl-cta-button">
-    Get Your Free Quote
-  </Link>
+        <p className="rl-cta-subtitle">Contact us today for a free consultation and estimate. Our friendly experts will assess your property, answer any questions, and design a maintenance plan tailored to your needs and budget.</p>
+        
+        <div className="rl-cta-services">
+          <p>You might also be interested in our:</p>
+          <div className="rl-service-links">
+            <Link to="/services/irrigation" className="rl-service-link">Irrigation Services</Link>
+            <Link to="/services/sod-installation" className="rl-service-link">Sod Installation</Link>
+            <Link to="/services/lawn-recovery-package" className="rl-service-link">Lawn Recovery Package</Link>
+          </div>
+        </div>
+        
+        <Link to="/contact" className="rl-cta-button">
+          Get Your Free Quote
+        </Link>
       </div>
     </section>
   );
