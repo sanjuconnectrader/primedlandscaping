@@ -1,26 +1,9 @@
 import React from 'react';
-import {
-  FaHome,
-  FaCalendarAlt,
-  FaDollarSign,
-  FaCheckCircle,
-  FaPlusCircle,
-  FaSeedling,
-  FaTree,
-  FaCut,
-  FaLeaf,
-  FaTrashAlt,
-  FaTint,
-  FaUmbrellaBeach,
-  FaStar,
-  FaWater,
-} from 'react-icons/fa';
 import './LawncareDetails.css';
 import { Link } from "react-router-dom";
 
 const residentialServices = [
   {
-    icon: FaHome,
     title: 'Comprehensive Residential Lawn Care & Maintenance',
     content: [
       `At <strong>Primed Landscaping</strong>, we offer weekly, year-round residential lawn maintenance to keep your property in perfect shape throughout all seasons. With our <strong>12 equal monthly payments</strong>, you can enjoy continuous lawn care with no surprises or hidden fees.`,
@@ -33,99 +16,78 @@ const residentialServices = [
     },
   },
   {
-    icon: FaPlusCircle,
     title: 'Custom Residential Lawn Care Package (Sizes May Vary)',
     content: [
       `At Primed Landscaping, we offer a <strong>Custom Residential Lawn Care Package</strong> designed for homeowners who value flexibility and a personalized approach. This package allows you to choose the contract length that fits your needs—whether it's monthly, quarterly, or annually. Due to the flexibility this package offers, the cost is higher compared to our standard packages.`,
     ],
     features: [
       {
-        icon: FaCalendarAlt,
         text: 'Flexible Contract Length – Choose a contract that fits your schedule and property needs, whether on a quarterly, 6 month, or yearly basis.',
       },
       {
-        icon: FaCheckCircle,
         text: 'Full Property Maintenance – Weekly services include mowing, edging, debris cleanup, flower bed control, and trimming.',
       },
       {
-        icon: FaDollarSign,
         text: 'Due to the flexibility the custom package offers, the price is higher than the other 4 packages.',
       },
     ],
     badge: 'Most Flexible',
   },
   {
-    icon: FaSeedling,
     title: 'Small Residential Package (0.00 – 0.25 Acres) – Starts at $249/month',
     content: [
       'Perfect for smaller properties, this package offers essential weekly maintenance to keep your yard looking clean and well‑maintained. With all packages, you can add unique services for an additional cost.',
     ],
     features: [
       {
-        icon: FaCut,
         text: 'Mowing – Keeps your lawn at the right height, encouraging healthy growth and preventing thatch buildup.',
       },
       {
-        icon: FaLeaf,
         text: 'Edging – Defines borders along sidewalks, driveways, and garden beds to maintain a crisp, clean look.',
       },
       {
-        icon: FaTrashAlt,
         text: 'Blowing Off Debris – Clears leaves, grass clippings, and dirt from all hard surfaces to maintain a neat appearance.',
       },
       {
-        icon: FaSeedling,
         text: 'Weeding & Flower Bed Control – Regular weeding prevents unwanted plants from overtaking your garden.',
       },
       {
-        icon: FaTree,
         text: 'Trimming – Shapes shrubs, bushes, and small trees, keeping your landscape neat and uniform.',
       },
       {
-        icon: FaLeaf,
         text: 'Raking Fallen Leaves – Regular leaf raking prevents buildup that can smother your grass, keeping your lawn healthy and looking neat.',
       },
       {
-        icon: FaTint,
         text: 'Quarterly Fertilization (add‑on) – This service provides essential nutrients to your lawn, ensuring it stays lush and healthy throughout the year.',
       },
       {
-        icon: FaWater,
         text: 'Irrigation System Check – We inspect and tune your sprinklers to ensure efficient watering, preventing dry spots and water waste.',
       },
       {
-        icon: FaPlusCircle,
         text: 'Seasonal Planting Advice – Personalized guidance on seasonal flowers and plants to keep your landscape vibrant all year.',
       },
     ],
     badge: 'Popular Choice',
   },
   {
-    icon: FaCheckCircle,
     title: 'Why Choose Primed Landscaping?',
     features: [
       {
-        icon: FaCalendarAlt,
         text: 'Weekly Maintenance in All Seasons – Ensures that your property stays looking great year‑round, regardless of the season.',
       },
       {
-        icon: FaDollarSign,
         text: 'Equal Monthly Payments – A predictable, stable cost each month makes budgeting for lawn care simple and straightforward.',
       },
       {
-        icon: FaCheckCircle,
         text: 'One‑Year Contract with First Month No Commitment – Try our services for a month with no obligation before committing to the full year.',
       },
       {
-        icon: FaHome,
         text: "Full Property Maintenance – Covers all aspects of lawn care and landscape maintenance, so you don't need to worry about a thing.",
       },
       {
-        icon: FaSeedling,
         text: 'Eco‑Friendly Practices – We use organic products and water‑smart methods to keep your lawn healthy, safe for kids and pets, and kind to the planet.',
       },
       {
-        icon: FaStar,
         text: '100 % Satisfaction Guarantee – Our crew isn’t finished until you are delighted, ensuring consistent, top‑quality results every visit.',
       },
     ],
@@ -151,9 +113,6 @@ export default function ResidentialLawncare() {
             )}
             
             <div className="rl-service-header">
-              <div className="rl-service-icon">
-                <service.icon aria-hidden="true" />
-              </div>
               <h2 className="rl-service-title">{service.title}</h2>
             </div>
 
@@ -167,9 +126,6 @@ export default function ResidentialLawncare() {
 
             {service.disclaimer && (
               <div className="rl-service-disclaimer">
-                <div className="rl-disclaimer-icon">
-                  <FaUmbrellaBeach />
-                </div>
                 <div>
                   <h3>{service.disclaimer.title}</h3>
                   <p>{service.disclaimer.text}</p>
@@ -183,9 +139,6 @@ export default function ResidentialLawncare() {
                 <ul className="rl-features-list">
                   {service.features.map((feature, i) => (
                     <li key={i} className="rl-feature-item">
-                      <div className="rl-feature-icon">
-                        <feature.icon aria-hidden="true" />
-                      </div>
                       <span className="rl-feature-text">{feature.text}</span>
                     </li>
                   ))}
@@ -195,9 +148,6 @@ export default function ResidentialLawncare() {
 
             {service.closing && (
               <div className="rl-service-closing">
-                <div className="rl-closing-icon">
-                  <FaCheckCircle />
-                </div>
                 <p>{service.closing}</p>
               </div>
             )}
