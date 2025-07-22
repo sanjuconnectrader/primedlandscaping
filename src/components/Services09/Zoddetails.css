@@ -56,8 +56,9 @@
 
 .zoddetails__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--gap);
+  width: 100%;
 }
 
 .zoddetails__card {
@@ -112,7 +113,127 @@
   font-size: 1.05rem;
 }
 
-@media (max-width: 1200px) {
+/* 4K and Ultra-Wide Screens (2560px+) */
+@media (min-width: 2560px) {
+  .zoddetails__container {
+    max-width: 2000px;
+  }
+  .zoddetails__title {
+    font-size: 3.8rem;
+  }
+  .zoddetails__subtitle {
+    font-size: 1.6rem;
+  }
+  .zoddetails__grid {
+    gap: 36px;
+  }
+  .zoddetails__card {
+    padding: 40px;
+  }
+  .zoddetails__card-title {
+    font-size: 1.8rem;
+  }
+  .zoddetails__card-text {
+    font-size: 1.15rem;
+  }
+}
+
+/* Large Desktop (1920px) */
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .zoddetails__container {
+    max-width: 1800px;
+  }
+  .zoddetails__title {
+    font-size: 3.5rem;
+  }
+  .zoddetails__subtitle {
+    font-size: 1.45rem;
+  }
+  .zoddetails__grid {
+    gap: 32px;
+  }
+  .zoddetails__card {
+    padding: 36px;
+  }
+  .zoddetails__card-title {
+    font-size: 1.6rem;
+  }
+  .zoddetails__card-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Standard Desktop (1440px) */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .zoddetails__container {
+    max-width: 1400px;
+  }
+  .zoddetails__title {
+    font-size: 3rem;
+  }
+  .zoddetails__subtitle {
+    font-size: 1.3rem;
+  }
+  .zoddetails__grid {
+    gap: 28px;
+  }
+  .zoddetails__card {
+    padding: 30px;
+  }
+  .zoddetails__card-title {
+    font-size: 1.45rem;
+  }
+  .zoddetails__card-text {
+    font-size: 1rem;
+  }
+}
+
+/* Laptop (1366px) */
+@media (min-width: 1366px) and (max-width: 1439px) {
+  .zoddetails__container {
+    max-width: 1300px;
+  }
+  .zoddetails__title {
+    font-size: 2.8rem;
+  }
+  .zoddetails__subtitle {
+    font-size: 1.2rem;
+  }
+  .zoddetails__grid {
+    gap: 24px;
+  }
+  .zoddetails__card {
+    padding: 28px;
+  }
+  .zoddetails__card-title {
+    font-size: 1.35rem;
+  }
+  .zoddetails__card-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Laptop (1280px) */
+@media (min-width: 1280px) and (max-width: 1365px) {
+  .zoddetails__container {
+    max-width: 1200px;
+  }
+  .zoddetails__title {
+    font-size: 2.6rem;
+  }
+  .zoddetails__subtitle {
+    font-size: 1.15rem;
+  }
+  .zoddetails__grid {
+    gap: 20px;
+  }
+  .zoddetails__card {
+    padding: 24px;
+  }
+}
+
+/* Tablet Landscape and Small Laptops */
+@media (max-width: 1279px) {
   .zoddetails__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -121,49 +242,108 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .zoddetails { padding: 80px 0; }
-  .zoddetails__title { font-size: 2.8rem; }
-  .zoddetails__card { padding: 28px; }
-}
-
+/* Tablet Portrait */
 @media (max-width: 900px) {
-  .zoddetails__title { font-size: 2.5rem; }
+  .zoddetails {
+    padding: 80px 0;
+  }
+  .zoddetails__title {
+    font-size: 2.5rem;
+  }
+  .zoddetails__subtitle {
+    font-size: 1.15rem;
+  }
+  .zoddetails__header {
+    margin-bottom: 60px;
+  }
+  .zoddetails__card {
+    padding: 24px;
+  }
 }
 
+/* Mobile Landscape */
 @media (max-width: 768px) {
-  .zoddetails { padding: 60px 0; }
-  .zoddetails__title { font-size: 2.2rem; line-height: 1.2; }
-  .zoddetails__subtitle { font-size: 1.15rem; }
-  .zoddetails__header { margin-bottom: 60px; }
-  .zoddetails__card { padding: 24px; }
-  .zoddetails__card-title { font-size: 1.3rem; }
-  .zoddetails__card-text { font-size: 0.95rem; }
+  .zoddetails {
+    padding: 60px 0;
+  }
+  .zoddetails__title {
+    font-size: 2.2rem;
+  }
+  .zoddetails__subtitle {
+    font-size: 1.05rem;
+  }
+  .zoddetails__card-title {
+    font-size: 1.3rem;
+  }
+  .zoddetails__card-text {
+    font-size: 0.95rem;
+  }
 }
 
+/* Mobile Portrait */
 @media (max-width: 640px) {
-  .zoddetails { padding: 50px 0;  }
-  .zoddetails__container { padding: 0 20px; }
-  .zoddetails__grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; gap: 70px;}
-  .zoddetails__title { font-size: 1.9rem; }
-  .zoddetails__subtitle { font-size: 1.05rem; }
+  .zoddetails__grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 70px;
+  }
+  .zoddetails {
+    padding: 50px 0;
+  }
+  .zoddetails__container {
+    padding: 0 20px;
+  }
+  .zoddetails__title {
+    font-size: 1.9rem;
+  }
+  .zoddetails__subtitle {
+    font-size: 1.05rem;
+  }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
-  .zoddetails { padding: 40px 0; }
-  .zoddetails__container { padding: 0 16px; }
-  .zoddetails__title { font-size: 1.7rem; }
-  .zoddetails__subtitle { font-size: 0.95rem; }
-  .zoddetails__card { padding: 20px; }
-  .zoddetails__card-title { font-size: 1.1rem; }
-  .zoddetails__card-text { font-size: 0.85rem; }
+  .zoddetails {
+    padding: 40px 0;
+  }
+  .zoddetails__container {
+    padding: 0 16px;
+  }
+  .zoddetails__title {
+    font-size: 1.7rem;
+  }
+  .zoddetails__subtitle {
+    font-size: 0.95rem;
+  }
+  .zoddetails__card {
+    padding: 20px;
+  }
+  .zoddetails__card-title {
+    font-size: 1.1rem;
+  }
+  .zoddetails__card-text {
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 375px) {
-  .zoddetails { padding: 35px 0; }
-  .zoddetails__title { font-size: 1.5rem; }
-  .zoddetails__subtitle { font-size: 0.85rem; }
-  .zoddetails__card { padding: 18px;  }
-  .zoddetails__card-title { font-size: 1.05rem; }
-  .zoddetails__card-text { font-size: 0.82rem; }
+  .zoddetails {
+    padding: 35px 0;
+  }
+  .zoddetails__title {
+    font-size: 1.5rem;
+  }
+  .zoddetails__subtitle {
+    font-size: 0.85rem;
+  }
+  .zoddetails__card {
+    padding: 18px;
+  }
+  .zoddetails__card-title {
+    font-size: 1.05rem;
+  }
+  .zoddetails__card-text {
+    font-size: 0.82rem;
+  }
 }
