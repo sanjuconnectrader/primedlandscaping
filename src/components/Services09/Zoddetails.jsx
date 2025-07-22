@@ -45,5 +45,5 @@ export default function Zoddetails() {
         </div>
       </div>
     </section>
-  )
+  );
 }
