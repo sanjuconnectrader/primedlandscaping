@@ -86,43 +86,20 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 0;
   height: 4px;
-  background: transparent;
-  transition: background var(--transition);
-}
-
-.turfdetails__card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary-light);
+  background: var(--primary-color);
+  transition: width 0.3s ease-in-out;
 }
 
 .turfdetails__card:hover::before {
-  background: var(--primary-color);
+  width: 100%;
 }
 
-.turfdetails__card-icon {
-  width: 68px;
-  height: 68px;
-  background-color: var(--primary-light);
-  color: var(--primary-color);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  margin-bottom: 1.8rem;
-  transition: var(--transition);
-  flex-shrink: 0;
-  box-shadow: 0 4px 15px rgba(58, 125, 68, 0.15);
-}
-
-.turfdetails__card:hover .turfdetails__card-icon {
-  background-color: var(--primary-color);
-  color: white;
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(58, 125, 68, 0.3);
+.turfdetails__card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-light);
 }
 
 .turfdetails__card-content {
@@ -166,12 +143,6 @@
   .turfdetails__card {
     padding: 28px;
   }
-  .turfdetails__card-icon {
-    width: 62px;
-    height: 62px;
-    font-size: 1.9rem;
-    margin-bottom: 1.6rem;
-  }
   .turfdetails__card-title {
     font-size: 1.4rem;
   }
@@ -202,12 +173,6 @@
   }
   .turfdetails__card {
     padding: 24px;
-  }
-  .turfdetails__card-icon {
-    width: 56px;
-    height: 56px;
-    font-size: 1.7rem;
-    margin-bottom: 1.4rem;
   }
   .turfdetails__card-title {
     font-size: 1.3rem;
@@ -242,12 +207,6 @@
   .turfdetails__card {
     padding: 24px;
   }
-  .turfdetails__card-icon {
-    width: 52px;
-    height: 52px;
-    font-size: 1.6rem;
-    margin-bottom: 1.25rem;
-  }
   .turfdetails__card-title {
     font-size: 1.2rem;
   }
@@ -278,11 +237,6 @@
   .turfdetails__card {
     padding: 20px;
   }
-  .turfdetails__card-icon {
-    width: 48px;
-    height: 48px;
-    font-size: 1.4rem;
-  }
   .turfdetails__card-title {
     font-size: 1.1rem;
   }
@@ -305,12 +259,6 @@
   }
   .turfdetails__card {
     padding: 18px;
-  }
-  .turfdetails__card-icon {
-    width: 44px;
-    height: 44px;
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
   }
   .turfdetails__card-title {
     font-size: 1.05rem;

@@ -1,364 +1,201 @@
 :root {
-    --primary-color: #3a7d44;
-    --primary-light: rgba(58, 125, 68, 0.1);
-    --text-color: #333333;
-    --text-light: #555555;
-    --border-color: #eaeaea;
-    --container-max: 1200px;
-    --gap: 32px;
-    --border-radius: 16px;
-    --transition: all 0.3s ease-in-out;
-    /* Smoother transitions */
-    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
-    /* Soft, subtle shadow */
-    --shadow-medium: 0 12px 28px rgba(0, 0, 0, 0.1);
-    /* Deeper shadow for hover */
+  --primary-color: #3a7d44;
+  --primary-light: rgba(58, 125, 68, 0.1);
+  --text-color: #333333;
+  --text-light: #555555;
+  --border-color: #eaeaea;
+  --container-max: 1200px;
+  --gap: 32px;
+  --border-radius: 16px;
+  --transition: all 0.3s ease-in-out;
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .CommercialDetails {
-    background-color: #ffffff;
-    /* Main section background remains white */
-    padding: 100px 0;
-    /* More vertical padding for a spacious feel */
-    position: relative;
-    overflow: hidden;
-    /* Ensures no overflow from animations */
+  background-color: #ffffff;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .CommercialDetails__container {
-    max-width:1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-    box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .CommercialDetails__main-header {
-    text-align: center;
-    margin-bottom: 80px;
-    /* More space below the main header */
-    max-width: 900px;
-    /* Wider main header for longer descriptions */
-    margin-left: auto;
-    margin-right: auto;
+  text-align: center;
+  margin-bottom: 80px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .CommercialDetails__main-title {
-    font-size: 3rem;
-    /* Larger, more impactful main title */
-    font-weight: 700;
-    /* Bolder for prominence */
-    color: var(--text-color);
-    margin-bottom: 1.25rem;
-    /* Tighter spacing to description */
-    line-height: 1.2;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.CommercialDetails__main-description {
-    font-size: 1.35rem;
-    /* Larger, more inviting description */
-    color: var(--text-light);
-    line-height: 1.8;
-    /* Improved readability */
-    margin: 0;
-     font-family: 'Montserrat', sans-serif;
-}
-
-.CommercialDetails__services {
-    display: grid;
-    /* Auto-fit for responsiveness: min width 350px, max 1fr */
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: var(--gap);
-    /* Use CSS variable for consistent gap */
-}
-
-.CommercialDetails__service {
-    background: #ffffff;
-    /* White background for service cards */
-    border-radius: var(--border-radius);
-    padding: 40px;
-    /* Increased padding inside cards */
-    box-shadow: var(--shadow-light);
-    /* Soft initial shadow */
-    transition: var(--transition);
-    /* Smooth transitions */
-    border: 1px solid var(--border-color);
-    /* Light border */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* Align content to the start */
-    text-align: left;
-    /* Text align left for better readability */
-}
-
-.CommercialDetails__service:hover {
-    transform: translateY(-10px);
-    /* More significant lift on hover */
-    box-shadow: var(--shadow-medium);
-    /* Deeper shadow on hover */
-    border-color: var(--primary-color);
-    /* Highlight border on hover */
-}
-
-.CommercialDetails__service-icon {
-    width: 68px;
-    /* Larger icon */
-    height: 68px;
-    /* Larger icon */
-    background-color: var(--primary-light);
-    color: var(--primary-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    /* Larger icon size */
-    margin-bottom: 1.75rem;
-    /* More space below icon */
-    transition: var(--transition);
-    box-shadow: 0 4px 15px rgba(58, 125, 68, 0.15);
-    /* Subtle shadow for icon */
-}
-
-.CommercialDetails__service:hover .CommercialDetails__service-icon {
-    background-color: var(--primary-color);
-    color: white;
-    box-shadow: 0 6px 20px rgba(58, 125, 68, 0.3);
-    /* Enhanced icon shadow on hover */
-}
-
-.CommercialDetails__service-content {
-    flex: 1;
-    /* Allows content to take available space */
-}
-
-.CommercialDetails__service-title {
-    font-size: 1.6rem;
-    /* Larger service title */
-    font-weight: 700;
-    /* Bolder service title */
-    color: var(--text-color);
-    margin-bottom: 1rem;
-    line-height: 1.3;
-     font-family: 'Montserrat', sans-serif;
-}
-
-.CommercialDetails__service-description {
-    color: var(--text-light);
-    line-height: 1.8;
-    /* Improved line height for description */
-    margin: 0;
-    font-size: 1.05rem;
-    /* Slightly larger description text */
-     font-family: 'Montserrat', sans-serif;
-}
-         
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-    .CommercialDetails {
-        padding: 80px 0;
-    }
-
-    .CommercialDetails__main-header {
-        margin-bottom: 60px;
-    }
-
-    .CommercialDetails__main-title {
-        font-size: 2.5rem;
-    }
-
-    .CommercialDetails__main-description {
-        font-size: 1.2rem;
-    }
-
-    .CommercialDetails__services {
-        gap: 28px;
-    }
-
-    .CommercialDetails__service {
-        padding: 32px;
-    }
-
-    .CommercialDetails__service-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 1.8rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .CommercialDetails__service-title {
-        font-size: 1.45rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .CommercialDetails {
-        padding: 60px 0;
-    }
-
-    .CommercialDetails__main-header {
-        margin-bottom: 40px;
-    }
-
-    .CommercialDetails__main-title {
-        font-size: 2rem;
-    }
-
-    .CommercialDetails__main-description {
-        font-size: 1.05rem;
-    }
-
-    .CommercialDetails__services {
-        grid-template-columns: 1fr;
-        /* Stack services on mobile */
-        max-width: 500px;
-        /* Constrain width for better readability */
-        margin: 0 auto;
-        gap: 24px;
-    }
-
-    .CommercialDetails__service {
-        padding: 28px;
-    }
-
-    .CommercialDetails__service-icon {
-        width: 55px;
-        height: 55px;
-        font-size: 1.6rem;
-        margin-bottom: 1.25rem;
-    }
-
-    .CommercialDetails__service-title {
-        font-size: 1.3rem;
-    }
-
-    .CommercialDetails__service-description {
-        font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .CommercialDetails {
-        padding: 40px 0;
-    }
-
-    .CommercialDetails__main-title {
-        font-size: 1.75rem;
-    }
-
-    .CommercialDetails__main-description {
-        font-size: 0.95rem;
-    }
-
-    .CommercialDetails__service {
-        padding: 24px;
-    }
-
-    .CommercialDetails__service-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 1.4rem;
-    }
-
-    .CommercialDetails__service-title {
-        font-size: 1.15rem;
-    }
-}
-
-
-
-/* All existing CSS remains exactly the same */
-
-/* Add these new styles at the bottom of the file */
-.CommercialDetails__recovery {
-  text-align: center;
-  margin-top: 60px;
-  padding: 40px;
-  background-color: var(--primary-light);
-  border-radius: var(--border-radius);
-}
-
-.CommercialDetails__recovery-text {
-  font-size: 1.25rem;
+  font-size: 3rem;
+  font-weight: 700;
   color: var(--text-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
   font-family: 'Montserrat', sans-serif;
 }
 
-.CommercialDetails__cta-button {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: var(--transition);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  box-shadow: var(--shadow-light);
+.CommercialDetails__main-description {
+  font-size: 1.35rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.CommercialDetails__cta-button:hover {
-  background-color: var(--text-color);
-  transform: translateY(-3px);
+.CommercialDetails__services {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--gap);
+}
+
+.CommercialDetails__service {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  padding: 40px;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.CommercialDetails__service::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease-in-out;
+}
+
+.CommercialDetails__service:hover::before {
+  width: 100%;
+}
+
+.CommercialDetails__service:hover {
+  transform: translateY(-5px);
   box-shadow: var(--shadow-medium);
 }
 
-.CommercialDetails__cta-icon {
-  font-size: 0.9rem;
+.CommercialDetails__service-content {
+  flex: 1;
 }
 
-/* Responsive adjustments for new elements */
+.CommercialDetails__service-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.CommercialDetails__service-description {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin: 0;
+  font-size: 1.05rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
 @media (max-width: 1024px) {
-  .CommercialDetails__recovery {
-    margin-top: 50px;
-    padding: 30px;
+  .CommercialDetails {
+    padding: 80px 0;
   }
-  
-  .CommercialDetails__recovery-text {
-    font-size: 1.15rem;
+
+  .CommercialDetails__main-header {
+    margin-bottom: 60px;
   }
-  
-  .CommercialDetails__cta-button {
-    padding: 0.875rem 1.75rem;
-    font-size: 1rem;
+
+  .CommercialDetails__main-title {
+    font-size: 2.5rem;
+  }
+
+  .CommercialDetails__main-description {
+    font-size: 1.2rem;
+  }
+
+  .CommercialDetails__services {
+    gap: 28px;
+  }
+
+  .CommercialDetails__service {
+    padding: 32px;
+  }
+
+  .CommercialDetails__service-title {
+    font-size: 1.45rem;
   }
 }
 
 @media (max-width: 768px) {
-  .CommercialDetails__recovery {
-    margin-top: 40px;
-    padding: 25px;
+  .CommercialDetails {
+    padding: 60px 0;
   }
-  
-  .CommercialDetails__recovery-text {
+
+  .CommercialDetails__main-header {
+    margin-bottom: 40px;
+  }
+
+  .CommercialDetails__main-title {
+    font-size: 2rem;
+  }
+
+  .CommercialDetails__main-description {
     font-size: 1.05rem;
   }
-  
-  .CommercialDetails__cta-button {
-    padding: 0.75rem 1.5rem;
+
+  .CommercialDetails__services {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  .CommercialDetails__service {
+    padding: 28px;
+  }
+
+  .CommercialDetails__service-title {
+    font-size: 1.3rem;
+  }
+
+  .CommercialDetails__service-description {
     font-size: 0.95rem;
   }
 }
 
 @media (max-width: 480px) {
-  .CommercialDetails__recovery {
-    margin-top: 30px;
-    padding: 20px;
+  .CommercialDetails {
+    padding: 40px 0;
   }
-  
-  .CommercialDetails__recovery-text {
+
+  .CommercialDetails__main-title {
+    font-size: 1.75rem;
+  }
+
+  .CommercialDetails__main-description {
     font-size: 0.95rem;
   }
-  
-  .CommercialDetails__cta-button {
-    padding: 0.625rem 1.25rem;
-    font-size: 0.875rem;
+
+  .CommercialDetails__service {
+    padding: 24px;
+  }
+
+  .CommercialDetails__service-title {
+    font-size: 1.15rem;
   }
 }

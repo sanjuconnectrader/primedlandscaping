@@ -85,6 +85,8 @@
   font-size: 2rem;
   color: var(--primary-green);
   margin-bottom: var(--spacing-sm);
+
+   
 }
 
 .Schedule-feature h3 {
@@ -109,11 +111,7 @@
 }
 
 .Schedule-button {
-  background: linear-gradient(
-    135deg,
-    var(--primary-green),
-    var(--primary-green-dark)
-  );
+ background: linear-gradient(90deg, #2a5f4b, #4caf7d);
   color: var(--white);
   border: none;
   padding: var(--spacing-sm) var(--spacing-xl);
