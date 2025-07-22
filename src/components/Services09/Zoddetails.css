@@ -236,7 +236,7 @@
 @media (max-width: 1279px) {
   .zoddetails__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 90px;
+    gap: 92px;
   }
   .zoddetails__container {
     padding: 0 32px;
