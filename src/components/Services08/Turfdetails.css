@@ -47,8 +47,6 @@
   margin-bottom: 1.5rem;
   line-height: 1.15;
   letter-spacing: -0.03em;
-  word-break: break-word;
-  hyphens: auto;
 }
 
 .turfdetails__subtitle {
@@ -60,9 +58,10 @@
   opacity: 0.95;
 }
 
+/* Grid System - 4 columns by default */
 .turfdetails__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--gap);
   width: 100%;
 }
@@ -122,16 +121,38 @@
   font-size: 1.05rem;
 }
 
-/* 4K and Ultra-wide (2560px and up) */
-@media (min-width: 2560px) {
-  .turfdetails {
-    padding: 120px 0;
-  }
+/* 8K and Ultra-wide (3840px and up) */
+@media (min-width: 3840px) {
   .turfdetails__container {
-    max-width: 1800px;
+    max-width: 2400px;
   }
   .turfdetails__title {
-    font-size: 4rem;
+    font-size: 4.5rem;
+  }
+  .turfdetails__subtitle {
+    font-size: 2rem;
+  }
+  .turfdetails__grid {
+    gap: 40px;
+  }
+  .turfdetails__card {
+    padding: 48px;
+  }
+  .turfdetails__card-title {
+    font-size: 2.2rem;
+  }
+  .turfdetails__card-text {
+    font-size: 1.3rem;
+  }
+}
+
+/* 4K (2560px - 3839px) */
+@media (min-width: 2560px) and (max-width: 3839px) {
+  .turfdetails__container {
+    max-width: 2000px;
+  }
+  .turfdetails__title {
+    font-size: 3.8rem;
   }
   .turfdetails__subtitle {
     font-size: 1.6rem;
@@ -151,10 +172,7 @@
 }
 
 /* WQHD (1440p) and large laptops (1600px - 2559px) */
-@media (max-width: 2559px) and (min-width: 1600px) {
-  .turfdetails {
-    padding: 110px 0;
-  }
+@media (min-width: 1600px) and (max-width: 2559px) {
   .turfdetails__container {
     max-width: 1600px;
   }
@@ -178,16 +196,19 @@
   }
 }
 
-/* Full HD (1080p) and standard laptops (1366px - 1599px) */
-@media (max-width: 1599px) and (min-width: 1366px) {
-  .turfdetails {
-    padding: 100px 0;
+/* Full HD (1080p) (1366px - 1599px) */
+@media (min-width: 1366px) and (max-width: 1599px) {
+  .turfdetails__container {
+    max-width: 1400px;
   }
   .turfdetails__title {
     font-size: 3.2rem;
   }
   .turfdetails__subtitle {
     font-size: 1.35rem;
+  }
+  .turfdetails__grid {
+    gap: 28px;
   }
   .turfdetails__card {
     padding: 32px;
@@ -201,9 +222,9 @@
 }
 
 /* HD (720p) and small laptops (1024px - 1365px) */
-@media (max-width: 1365px) and (min-width: 1024px) {
-  .turfdetails {
-    padding: 90px 0;
+@media (min-width: 1024px) and (max-width: 1365px) {
+  .turfdetails__container {
+    max-width: 1200px;
   }
   .turfdetails__title {
     font-size: 2.8rem;
@@ -212,7 +233,7 @@
     font-size: 1.25rem;
   }
   .turfdetails__grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
   .turfdetails__card {
     padding: 28px;
@@ -226,7 +247,7 @@
 }
 
 /* Tablet Landscape (900px - 1023px) */
-@media (max-width: 1023px) and (min-width: 900px) {
+@media (min-width: 900px) and (max-width: 1023px) {
   .turfdetails {
     padding: 80px 0;
   }
@@ -237,15 +258,15 @@
     font-size: 1.15rem;
   }
   .turfdetails__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .turfdetails__card {
-    padding: 28px;
+  .turfdetails__container {
+    padding: 0 32px;
   }
 }
 
 /* Tablet Portrait (768px - 899px) */
-@media (max-width: 899px) and (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 899px) {
   .turfdetails {
     padding: 70px 0;
   }
@@ -259,12 +280,12 @@
     margin-bottom: 60px;
   }
   .turfdetails__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 /* Large Mobile (600px - 767px) */
-@media (max-width: 767px) and (min-width: 600px) {
+@media (min-width: 600px) and (max-width: 767px) {
   .turfdetails {
     padding: 60px 0;
   }
@@ -274,13 +295,19 @@
   .turfdetails__subtitle {
     font-size: 1.05rem;
   }
+  .turfdetails__grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 40px;
+  }
   .turfdetails__card {
-    padding: 24px;
+    padding: 28px;
   }
 }
 
 /* Medium Mobile (480px - 599px) */
-@media (max-width: 599px) and (min-width: 480px) {
+@media (min-width: 480px) and (max-width: 599px) {
   .turfdetails {
     padding: 50px 0;
   }
@@ -297,11 +324,15 @@
     grid-template-columns: 1fr;
     max-width: 500px;
     margin: 0 auto;
+    gap: 35px;
+  }
+  .turfdetails__card {
+    padding: 24px;
   }
 }
 
 /* Small Mobile (375px - 479px) */
-@media (max-width: 479px) and (min-width: 375px) {
+@media (min-width: 375px) and (max-width: 479px) {
   .turfdetails {
     padding: 40px 0;
   }
@@ -313,6 +344,10 @@
   }
   .turfdetails__subtitle {
     font-size: 0.95rem;
+  }
+  .turfdetails__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
   .turfdetails__card {
     padding: 22px;
@@ -338,6 +373,10 @@
   }
   .turfdetails__subtitle {
     font-size: 0.9rem;
+  }
+  .turfdetails__grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
   }
   .turfdetails__card {
     padding: 20px;
