@@ -1,17 +1,8 @@
 import React from 'react';
-import {
-  FaLayerGroup,
-  FaSeedling,
-  FaBroom,
-  FaTruckMoving,
-  FaWater,
-  FaLeaf
-} from 'react-icons/fa';
 import './ThatchingandAerationDetails.css';
 
 const thatchingAndAerationServices = [
   {
-    icon: FaLayerGroup,
     title: 'Step 1: Dethatching',
     description: [
       'What It Is: Dethatching removes the layer of dead grass, roots, and debris (thatch) that builds up on the soil surface, preventing nutrients, water, and air from reaching the roots.',
@@ -19,7 +10,6 @@ const thatchingAndAerationServices = [
     ]
   },
   {
-    icon: FaSeedling,
     title: 'Step 2: Aeration',
     description: [
       'What It Is: Core aeration involves removing small plugs of soil from your lawn to reduce soil compaction and improve root growth.',
@@ -27,7 +17,6 @@ const thatchingAndAerationServices = [
     ]
   },
   {
-    icon: FaBroom,
     title: 'Step 3: Clean Up',
     description: [
       'What It Is: After dethatching and aeration, we remove debris, dead grass, and soil plugs from your lawn.',
@@ -35,7 +24,6 @@ const thatchingAndAerationServices = [
     ]
   },
   {
-    icon: FaTruckMoving,
     title: 'Step 4: Topsoil Application',
     description: [
       'What It Is: Spreading a thin layer of high-quality topsoil over the lawn to improve soil structure and provide essential nutrients.',
@@ -43,7 +31,6 @@ const thatchingAndAerationServices = [
     ]
   },
   {
-    icon: FaWater,
     title: 'Step 5: Grass Seeding',
     description: [
       'What It Is: Applying premium grass seed that is best suited for your climate and lawn conditions.',
@@ -51,7 +38,6 @@ const thatchingAndAerationServices = [
     ]
   },
   {
-    icon: FaLeaf,
     title: 'Step 6: Peat Moss Application',
     description: [
       'What It Is: Spreading a light layer of peat moss over the newly seeded lawn.',
@@ -77,9 +63,6 @@ export default function ThatchingandAerationDetails() {
         <div className="ThatchingandAerationDetails__services">
           {thatchingAndAerationServices.map((service, idx) => (
             <div key={idx} className="ThatchingandAerationDetails__service">
-              <div className="ThatchingandAerationDetails__service-icon">
-                <service.icon aria-hidden="true" />
-              </div>
               <div className="ThatchingandAerationDetails__service-content">
                 <h2 className="ThatchingandAerationDetails__service-title">{service.title}</h2>
                 <div className="ThatchingandAerationDetails__service-description">
@@ -104,7 +87,6 @@ export default function ThatchingandAerationDetails() {
             Get Your Free Quote
           </button>
         </div>
-
       </div>
     </section>
   );
