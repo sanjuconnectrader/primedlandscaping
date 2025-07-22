@@ -65,7 +65,11 @@
 }
 
 .maintenance-home-media-grid__item:hover {
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 06a62c7aa67005aa7645492ad8ddace89b0f94b5
   box-shadow: var(--shadow-lg);
 }
 
